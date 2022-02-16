@@ -120,9 +120,9 @@ export class Sampler extends Block {
     }
 }
 
-export class OneBitQuantizer extends Block {
+export class Quantizer extends Block {
     constructor (x, y, w, h) {
-        super(x, y, w, h, '1-BIT\nQUANTIZER');
+        super(x, y, w, h, 'QUANTIZER');
     }
 }
 
@@ -135,6 +135,12 @@ export class LowPassFilter extends Block {
 export class PredictionFilter extends Block {
     constructor (x, y, w, h) {
         super(x, y, w, h, 'PREDICTION\nFILTER');
+    }
+}
+
+export class ReconstructionFilter extends Block {
+    constructor (x, y, w, h) {
+        super(x, y, w, h, 'Reconstruction\nFILTER');
     }
 }
 
