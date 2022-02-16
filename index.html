@@ -19,6 +19,9 @@
 </head>
 
 <body>
+  <script>
+    var dFlag=true;
+  </script>
   <h1 class="title main-title">Pulse Code Modulation</h1>
 
   <button id="button1" type="button" class="btn btn-primary">
@@ -48,7 +51,7 @@
             <div id="container-split">
               <div class="container-variables">
                 <div class="variables">
-                    <h1 class="subtitle">Variables</h1>
+                  <h3 class="subtitle"><u><b>Variables</b></u></h3>
                     <label for="fname" class="varname">Amplitude(V):</label><br>
                     <div class="slidecontainer">
                         <input type="range" min="2" max="20" step="1" value="10" class="slider" id="amplitude">
@@ -76,12 +79,12 @@
                 </div>
             </div>
               <div class="container-result">
-                <h2 class="subtitle"><u><b>Result</b></u></h3>
+                <h3 class="subtitle"><u><b>Result</b></u></h3>
                   <h5 class="subtitle"><b>Wave Amplitude(V): </b><span id="Am"></span></h5>
-                  <h5 class="subtitle">Wave Frequency(hz): <span id="Fm"></span></h5>
-                  <h5 class="subtitle">Sampling Frequency(hz): <span id="Fs"></span> </h5>
-                  <h5 class="subtitle">Delta: <span id="Delta"></span> </h5>
-                  <h5 class="subtitle">Bit length: <span id="BL"></span> </h5>
+                  <h5 class="subtitle"><b>Wave Frequency(hz):</b> <span id="Fm"></span></h5>
+                  <h5 class="subtitle"><b>Sampling Frequency(hz):</b> <span id="Fs"></span> </h5>
+                  <h5 class="subtitle"><b>Delta:</b> <span id="Delta"></span> </h5>
+                  <h5 class="subtitle"><b>Bit length:</b> <span id="BL"></span> </h5>
               </div>
             </div>
           </div>
