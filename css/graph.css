@@ -24,6 +24,7 @@ body {
 }
 
 .container-variables {
+    border-left: 2px solid black;
     width: 80%;
     line-height: 0.7;
     padding-top:1.5rem;
@@ -33,14 +34,16 @@ body {
 .container-result {
     border-left: 2px solid black;
     width: max-content;
-    max-width: 80%;
-    padding:1.5rem 3rem;
+    max-width: 100%;
+    padding:1.5rem 2rem;
+    padding-right:1rem;
 }
 
 #container-checkbox{
     width: max-content;
-    max-width: 80%;
-    padding:1.5rem 0rem 3rem;
+    max-width: 100%;
+    padding:1.5rem 3rem;
+    padding-right:1rem;
 }
 
 .modal-body {
@@ -49,7 +52,7 @@ body {
 
 #container-split{
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 30% 40% 30%;
     height: 30% !important;
 }
 
