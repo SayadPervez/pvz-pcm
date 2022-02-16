@@ -21,10 +21,7 @@ let wave_amplitude_span = document.getElementById("Am");
 let delta_span = document.getElementById("Delta");
 let vertical_scale_slider = document.getElementById("vertical_scale_factor");
 let horizontal_scale_slider = document.getElementById("horizontal_scale_factor");
-// let unsampled_wave_checkbox = document.getElementById("unsampled_wave");
-// let sampled_points_checkbox = document.getElementById("sampled_points");
-// let staircase_wave_checkbox = document.getElementById("staircase_wave");
-
+let bit_length_element = document.getElementById("BL");
 let canvas_width = canvas.parentElement.clientWidth;
 let canvas_height = canvas.parentElement.clientHeight;
 

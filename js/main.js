@@ -1,6 +1,5 @@
 import { SineGenerator, Sampler, Quantizer, ReconstructionFilter } from './Block.js'
 import { Encoder, Decoder } from './Block.js';
-import { Adder } from './Adder.js';
 import { Line } from './Line.js';
 
 let myblocks = new Map();

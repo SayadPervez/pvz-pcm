@@ -46,55 +46,42 @@
               <canvas id="canvas"></canvas>
             </div>
             <div id="container-split">
-              <!-- <div id="container-checkbox">
-                <h2 class="subtitle"><u><b>Display</b></u></h1><br>
-                  <label class="checkbox-container"><span class="subspan">Show Unsampled wave</span>
-                    <input type="checkbox" name="usw" id="unsampled_wave" checked>
-                    <span class="checkmark"></span>
-                  </label><br>
-                  <label class="checkbox-container"><span class="subspan">Show Sampled points</span>
-                    <input type="checkbox" name="sp" id="sampled_points" checked>
-                    <span class="checkmark"></span>
-                  </label><br>
-                  <label class="checkbox-container"><span class="subspan">Show Staircase wave</span>
-                    <input type="checkbox" name="scw" id="staircase_wave" checked>
-                    <span class="checkmark"></span>
-                  </label><br>
-              </div> -->
               <div class="container-variables">
                 <div class="variables">
-                  <h2 class="subtitle"><u><b>Variables</b></u></h1>
+                    <h1 class="subtitle">Variables</h1>
                     <label for="fname" class="varname">Amplitude(V):</label><br>
                     <div class="slidecontainer">
-                      <input type="range" min="2" max="20" step="1" value="2" class="slider" id="amplitude">
+                        <input type="range" min="2" max="20" step="1" value="10" class="slider" id="amplitude">
                     </div>
                     <label for="fname" class="varname">Frequency(hz):</label><br>
                     <div class="slidecontainer">
-                      <input type="range" min="100" max="2000" step="2" value="100" class="slider" id="frequency">
+                        <input type="range" min="1" max="20" step="1" value="1" class="slider" id="frequency">
                     </div>
                     <label for="fname" class="varname">Sampling Frequency(hz):</label><br>
                     <div class="slidecontainer">
-                      <input type="range" min="500" max="20000" step="2" value="500" class="slider"
-                        id="sampling_frequency">
+                        <input type="range" min="20" max="200" step="2" value="20" class="slider" id="sampling_frequency">
                     </div>
                     <label for="fname" class="varname">Vertical Scale:</label><br>
                     <div class="slidecontainer">
-                      <input type="range" min="20" max="200" step="10" value="50" class="slider"
-                        id="vertical_scale_factor">
+                        <input type="range" min="10" max="200" step="10" value="10" class="slider" id="vertical_scale_factor">
                     </div>
                     <label for="fname" class="varname">Horizontal Scale:</label><br>
                     <div class="slidecontainer">
-                      <input type="range" min="2" max="200" step="10" value="50" class="slider"
-                        id="horizontal_scale_factor">
+                        <input type="range" min="20" max="200" step="10" value="50" class="slider" id="horizontal_scale_factor">
+                    </div>
+                    <label for="fname" class="varname">Bit Length:</label><br>
+                    <div class="slidecontainer">
+                        <input type="range" min="5" max="16" step="1" value="8" class="slider" id="bit_length_factor" onchange="dFlag=true;">
                     </div>
                 </div>
-              </div>
+            </div>
               <div class="container-result">
                 <h2 class="subtitle"><u><b>Result</b></u></h3>
                   <h5 class="subtitle"><b>Wave Amplitude(V): </b><span id="Am"></span></h5>
                   <h5 class="subtitle">Wave Frequency(hz): <span id="Fm"></span></h5>
                   <h5 class="subtitle">Sampling Frequency(hz): <span id="Fs"></span> </h5>
                   <h5 class="subtitle">Delta: <span id="Delta"></span> </h5>
+                  <h5 class="subtitle">Bit length: <span id="BL"></span> </h5>
               </div>
             </div>
           </div>
