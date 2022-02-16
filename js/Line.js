@@ -44,7 +44,7 @@ export class Line {
         }
 
         if (this.text) {
-            textSize(9.5 * Math.min(canvas.width / 1920, canvas.height / 1080));
+            textSize(12.5 * Math.min(canvas.width / 1920, canvas.height / 1080));
             textAlign(CENTER, BOTTOM);
             textStyle('bold');
             fill("#311b92");
