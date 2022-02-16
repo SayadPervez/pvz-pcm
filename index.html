@@ -21,9 +21,9 @@
 <body>
   <script>
     var dFlag=true;
-    var isQuantizationOn=true;
-    var isPCMon = true;
-    var isSamplingOn = true;
+    var isQuantizationOn=false;
+    var isPCMon = false;
+    var isSamplingOn = false;
     function quantCheck()
     {
         setTimeout(function() { 
@@ -88,11 +88,11 @@
                     <span class="checkmark"></span>
                 </label><br>
                 <label class="checkbox-container"><span class="subspan">Enable Sampling</span>
-                    <input type="checkbox" name="sp" id="sampled_points" checked onchange="sampCheck()">
+                    <input type="checkbox" name="sp" id="sampled_points" onchange="sampCheck()">
                     <span class="checkmark"></span>
                 </label><br>
                 <label class="checkbox-container"><span class="subspan">Enable Quantization</span>
-                    <input type="checkbox" name="sq" id="quantized_points" checked onchange="quantCheck()">
+                    <input type="checkbox" name="sq" id="quantized_points" onchange="quantCheck()">
                     <span class="checkmark"></span>
                 </label><br>
                 <label class="checkbox-container"  style="display:none;"><span class="subspan">Show Staircase wave</span>
@@ -100,7 +100,7 @@
                     <span class="checkmark"></span>
                 </label><br style="display:none;">
                 <label class="checkbox-container"><span class="subspan">Show PCM wave</span>
-                    <input type="checkbox" name="pcmw" id="pcm_wave" checked onchange="pcm_check()">
+                    <input type="checkbox" name="pcmw" id="pcm_wave"  onchange="pcm_check()">
                     <span class="checkmark"></span>
                 </label><br>
             </div>
