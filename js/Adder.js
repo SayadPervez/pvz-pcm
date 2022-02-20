@@ -1,5 +1,3 @@
-// True means don't calculate values
-var flag = true;
 export class Adder {
     constructor(r, update_pos_cb) {
         this.ro = r;

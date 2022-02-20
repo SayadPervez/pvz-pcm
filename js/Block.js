@@ -66,17 +66,6 @@ class Block {
     }
 }
 
-function createSlider(min, max, value) {
-    const slider = document.createElement("input");
-    slider.type = "range";
-    slider.min = String(min);
-    slider.max = String(max);
-    slider.value = String(value);
-    slider.classList.add("slider");
-    slider.style = "width: 200px";
-    return slider;
-}
-
 export class SineGenerator extends Block {
     constructor (x, y, w, h) {
         super(x, y, w, h, 'SINE\nGENERATOR', null, true);

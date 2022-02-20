@@ -66,11 +66,6 @@ const modalBtn = document.querySelector('#modal_btn');
 // const closeBtn = document.querySelector('.close');
 const closeBtn = document.querySelector('.close');
 
-// Events
-// modalBtn.onclick
-// closeBtn.addEventListener(onclick, closeModal);
-// window.addEventListener(onclick, outsideClick);
-
 function setup_demodulation() {
     myblocks.set('decoder', new Decoder(450+145, 587.6-170, 200, 100));
     myblocks.set('reconstructionfilter', new ReconstructionFilter(950+145, 587.6-170, 200, 100));
@@ -132,61 +127,11 @@ function setup_demodulation() {
     */
 }
 
-
-let currentModal = null;
-
-// Events
-closeBtn.addEventListener('onclick', () => {
-    console.log('close modal');
-    modal.style.display = 'none';
-});
-
 export function draw() {
     clear();
 
     myblocks.forEach((val, key) => {
         val.draw();
-    });
-}
-
-function singleClicked(event) {
-    console.log(mouseX, mouseY);
-}
-
-function doubleClicked() {
-    console.log('double');
-    if (currentModal) {
-        currentModal.style.display = 'none';
-        currentModal = null;
-    }
-}
-
-let numClicks = 0;
-let singleClickTimer;
-const handleClick = (event) => {
-    console.log(event);
-    numClicks++;
-    if (numClicks === 1) {
-        singleClickTimer = setTimeout(() => {
-            numClicks = 0;
-            singleClicked();
-        }, 250);
-    } else if (numClicks === 2) {
-        clearTimeout(singleClickTimer);
-        numClicks = 0;
-        doubleClicked();
-    }
-};
-
-
-function mousePressed(e) {
-    let clicked = false;
-    myblocks.forEach((val) => {
-        if (val.mouseOver()) {
-            clicked = true;
-            modal.style.display = 'block';
-            currentModal = modal;
-        }
     });
 }
 
@@ -200,7 +145,3 @@ export function setup() {
 window.setup = setup;
 window.draw = draw;
 window.windowResized = windowResized;
-window.onclick = singleClicked;
-window.ondblclick = doubleClicked;
-
-// document.addEventListener("click", handleClick);
