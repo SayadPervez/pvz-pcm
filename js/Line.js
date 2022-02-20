@@ -14,7 +14,7 @@ export class Line {
         this.update_pos();
     }
 
-    clicked(x, y) {
+    mouseOver() {
         return false;
     }
 

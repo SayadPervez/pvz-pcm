@@ -13,7 +13,7 @@ export class Adder {
         this.update_pos();
     }
 
-    clicked() {
+    mouseOver() {
         return false;
     }
 

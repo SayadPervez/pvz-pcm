@@ -182,7 +182,7 @@ const handleClick = (event) => {
 function mousePressed(e) {
     let clicked = false;
     myblocks.forEach((val) => {
-        if (val.clicked(mouseX, mouseY)) {
+        if (val.mouseOver()) {
             clicked = true;
             modal.style.display = 'block';
             currentModal = modal;
