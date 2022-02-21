@@ -72,7 +72,7 @@ function drawPoint(ctx, x, y) {
 }
 
 // Will draw the sine wave starting from loc xOffset, yOffset
-function plotLollipop(ctx, amplitude, frequency, xOffset, yOffset, vertical_scaling_factor, horizontal_scaling_factor) {
+function plotLollipop(ctx, amplitude, frequency, xOffset, yOffset, vertical_scaling_factor, horizontal_scaling_factor,mid_of_line) {
     var width = 1000;
     // Gets the wave's amplitude, frequency and sampling freq value.
     // var Fs = frequency * 25;
@@ -96,7 +96,7 @@ function plotLollipop(ctx, amplitude, frequency, xOffset, yOffset, vertical_scal
         drawPoint(ctx, xOffset + idx * horizontal_scaling_factor, yOffset - vertical_scaling_factor * x[idx]);
 
         ctx.moveTo(xOffset + idx * horizontal_scaling_factor, yOffset - vertical_scaling_factor * x[idx])
-        ctx.lineTo(xOffset + idx * horizontal_scaling_factor, orgy)
+        ctx.lineTo(xOffset + idx * horizontal_scaling_factor, mid_of_line)
         ctx.stroke();
         idx++;
     }
@@ -135,9 +135,9 @@ export function drawSampledWave() {
     // Vertical line start and end
     const line_start = 20;
     const line_end = canvas_height - 50;
-    const mid_of_line = (line_start + line_end) / 2;
+    var mid_of_line = (line_start + line_end) / 2;
 
     drawAxes(sampledWaveCtx, orgx, orgy, line_start, line_end);
-    plotLollipop(sampledWaveCtx, wave_amplitude, wave_frequency, orgx, mid_of_line, vertical_scaling_factor, horizontal_scaling_factor);
+    plotLollipop(sampledWaveCtx, wave_amplitude, wave_frequency, orgx, mid_of_line, vertical_scaling_factor, horizontal_scaling_factor,mid_of_line=mid_of_line);
     requestAnimationFrame(drawSampledWave);
 }
