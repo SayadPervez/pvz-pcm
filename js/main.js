@@ -1,8 +1,12 @@
 import { SineGenerator, Sampler, Quantizer, ReconstructionFilter } from './Block.js'
 import { Encoder, Decoder } from './Block.js';
+import { drawSourceWave } from './sourceWaveGraph.js';
+import { drawSampledWave } from './sampledWaveGraph.js';
+import { drawEncodedWave, getQuantizationLevels } from './encodedWaveGraph.js';
 import { Line } from './Line.js';
 
 let myblocks = new Map();
+let currentModal = null;
 
 function windowResized() {
     resizeCanvas(windowWidth, windowHeight);
@@ -59,12 +63,6 @@ function setup_modulation() {
     }, 0 , "PCM\noutput"));
     
 }
-
-// Get DOM Elements
-const modal = document.getElementById('my-modal');
-const modalBtn = document.querySelector('#modal_btn');
-// const closeBtn = document.querySelector('.close');
-const closeBtn = document.querySelector('.close');
 
 function setup_demodulation() {
     myblocks.set('decoder', new Decoder(450+145, 587.6-170, 200, 100));
@@ -127,11 +125,59 @@ function setup_demodulation() {
     */
 }
 
+function openModal(obj, dblClick = false) {
+    // On double click first a single click event is triggered and then the double click event
+    // Return if already showing a modal and a single click was performed
+    if (currentModal && !dblClick) {
+        return ;
+    }
+
+    if (currentModal && dblClick) {
+        $(`${currentModal}`).modal('hide');
+        currentModal = null;
+    }
+
+    let _modalName = dblClick ? obj.doubleClickModal() : obj.singleClickModal();
+    if (!_modalName) {
+        return ;
+    }
+    const modalName = `#${_modalName}`;
+
+
+    $(modalName).modal('show');
+    $(modalName).on('shown.bs.modal', function () {
+        if (modalName === '#sourceWaveGraph') {
+            drawSourceWave();
+        } else if (modalName === '#sampledWaveGraph') {
+            drawSampledWave();
+        } else if (modalName === '#quantizerOutput') {
+            const binLength = getQuantizationLevels();
+            document.getElementById('binListSize').innerHTML = binLength;
+        } else if (modalName == '#encodedWaveGraph') {
+            drawEncodedWave();
+        }
+    });
+    currentModal = modalName;
+
+    $(`${modalName}`).on('hidden.bs.modal', function () {
+        currentModal = null;
+    })
+}
+
+function doubleClicked() {
+    myblocks.forEach((val, key) => {
+        if (val.mouseOver()) {
+            openModal(val, true);
+        }
+    });
+}
+
 export function draw() {
     clear();
 
     myblocks.forEach((val, key) => {
-        val.draw();
+        const highlight = val.mouseOver() && !currentModal;
+        val.draw(highlight);
     });
 }
 
@@ -145,3 +191,4 @@ export function setup() {
 window.setup = setup;
 window.draw = draw;
 window.windowResized = windowResized;
+window.doubleClicked = doubleClicked;

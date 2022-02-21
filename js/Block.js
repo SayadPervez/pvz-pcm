@@ -33,11 +33,11 @@ class Block {
         // mouseX and mouseY are p5.js provided global variables
         const x = mouseX;
         const y = mouseY;
-        return x >= this.cx && x <= this.cx + this.cw &&
+        return this.selectable && x >= this.cx && x <= this.cx + this.cw &&
                y >= this.cy && y <= this.cy + this.ch;
     }
 
-    draw() {
+    draw(highlight = false) {
         const cx = this.cx;
         const cy = this.cy;
         const cw = this.cw;
@@ -47,7 +47,7 @@ class Block {
 
         fill("white");
         push();
-        if (this.selectable && this.mouseOver()) {
+        if (this.selectable && highlight) {
             stroke(255, 0, 0);
         } else {
             stroke(0, 0, 0);
@@ -64,6 +64,10 @@ class Block {
             text(this.name, cx + cw / 2, cy + ch / 2);
         }
     }
+
+    singleClickModal() { return null; }
+
+    doubleClickModal() { return null; }
 }
 
 export class SineGenerator extends Block {
@@ -81,10 +85,6 @@ export class SineGenerator extends Block {
         this.frequency = this.freq_slider.value;
     }
 
-    draw() {
-        super.draw();
-    }
-
     populate_modal(modal) {
         const label1 = document.createElement("h5");
         label1.innerText = "Amplitude: ";
@@ -98,6 +98,14 @@ export class SineGenerator extends Block {
         modal.appendChild(label);
         modal.appendChild(this.freq_slider);
     }
+
+    singleClickModal() {
+        return 'sineWaveInput';
+    }
+
+    doubleClickModal() {
+        return 'sourceWaveGraph';
+    }
 }
 
 export class Sampler extends Block {
@@ -110,14 +118,14 @@ export class Sampler extends Block {
 
     sampling_slider_change() {
         let amp = this.value;
-        console.log('SINE AMP: ', amp);
     }
-    populate_modal(modal) {
-        const label1 = document.createElement("h5");
-        label1.innerText = "Sampling Frequency: ";
-        label1.style = "display: block;"
-        modal.appendChild(label1);
-        modal.appendChild(this.sampling_slider);
+
+    singleClickModal() {
+        return 'samplerInput';
+    }
+
+    doubleClickModal() {
+        return 'sampledWaveGraph';
     }
 }
 
@@ -125,6 +133,8 @@ export class Quantizer extends Block {
     constructor (x, y, w, h) {
         super(x, y, w, h, 'QUANTIZER', null, true);
     }
+
+    doubleClickModal() { return 'quantizerOutput'; }
 }
 
 export class LowPassFilter extends Block {
@@ -149,6 +159,8 @@ export class Encoder extends Block {
     constructor (x, y, w, h) {
         super(x, y, w, h, 'ENCODER', null, true);
     }
+
+    doubleClickModal() { return 'encodedWaveGraph'; }
 }
 
 export class Decoder extends Block {

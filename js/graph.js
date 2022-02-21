@@ -75,6 +75,8 @@ function drawAxes() {
 
 }
 
+let gbinlengthsize = 0;
+
 function xrange(start, stop, step) {
     var res = [];
     var i = start;
@@ -126,6 +128,8 @@ function plotSine(ctx, xOffset, yOffset) {
     t.forEach((val) => {
         x.push(amplitude * Math.sin(2 * Math.PI * frequency * val));
     });
+    console.log('t size is ', t.length);
+    console.log('x size is ', x.length);
 
     ctx.beginPath();
     ctx.lineWidth = 2;
@@ -141,6 +145,7 @@ function plotSine(ctx, xOffset, yOffset) {
     ctx.stroke();
     ctx.save();
 
+    gbinlengthsize = t.length;
     if (check_pcm_wave.checked)
         plotPcmWave(t,x,xOffset,yOffset);
 
@@ -157,26 +162,6 @@ function plotSine(ctx, xOffset, yOffset) {
             idx++;
         }
     }
-
-    var e = new Array(x.length);
-    var eq = new Array(x.length);
-    var xq = new Array(x.length);
-
-    for (var i = 0; i < x.length; i++) {
-        if (i == 0) {
-            e[i] = x[i];
-            eq[i] = delta * Math.sign(e[i]);
-            xq[i] = parseFloat(eq[i].toFixed(2));
-        } else {
-            e[i] = x[i] - xq[i - 1]
-            eq[i] = delta * Math.sign(e[i]);
-            xq[i] = (eq[i] + xq[i - 1]);
-        }
-    }
-
-    // Draw the stair case wave
-    if (check_staircase_wave.checked)
-        plotStairCase(xq);
 }
 
 function plotPcmWave(t,x,xOffset,yOffset)
@@ -211,6 +196,7 @@ function plotPcmWave(t,x,xOffset,yOffset)
         console.log(quantizedList);
         console.log("bitLength=>",bitLength);
         console.log("binList=>",binList);
+        console.log("binList Size=>",binList.length);
         console.log("binString=>",entireBinaryString);
         console.log("binNumbList=>",binNumbList);
         console.log("------------------------");
@@ -306,5 +292,7 @@ function setupModal(event) {
 
     requestAnimationFrame(draw);
 }
+
+export function getBinLengthSize() { return gbinlengthsize; }
 
 document.getElementById("button1").onclick = setupModal;
