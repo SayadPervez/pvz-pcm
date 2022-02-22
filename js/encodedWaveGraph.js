@@ -109,7 +109,7 @@ function plotPcmWave(ctx, t, x, wave_amplitude, xOffset, yOffset, vertical_scali
     x.forEach((item)=>{
         quantizedList.push(Math.round(item));
         /////////////// EXPERIMENTAL ////////////////////
-        if(check_quantized_points.checked)
+        if(true)
             var temp=customBinaryFunc(Math.round(item),wave_amplitude*2,bitLength);
         else
             var temp=d2b(item,bitLength);

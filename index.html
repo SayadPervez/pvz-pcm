@@ -16,7 +16,6 @@
   <link rel="stylesheet" href="./css/scrollbars.css">
   <link rel="stylesheet" href="./css/checkmark.css">
   <link rel="stylesheet" href="./css/customslider.css">
-  <script type="module" src="js/mySync.js"></script>
 </head>
 
 <body>
@@ -349,7 +348,7 @@
           </div>
           <div class="container-variables-wo-border">
             <div class="variables">
-              <label for="fname" class="varname">Bit Length:&nbsp;<span id="bitlength">5</span></label><br>
+              <label for="fname" class="varname">Bit Length:&nbsp;<span id="bitlength">8</span></label><br>
               <div class="slidecontainer">
                 <input type="range" min="5" max="16" step="1" value="8" class="slider" id="bit_length_factor"
                   onchange="dFlag=true;" oninput="updateBitLength(this.value)">
@@ -360,7 +359,7 @@
               </div>
               <label for="fname" class="varname">Horizontal Scale:</label><br>
               <div class="slidecontainer">
-                <input type="range" min="2" max="200" step="10" value="50" class="slider"
+                <input type="range" min="5" max="200" step="5" value="40" class="slider"
                   id="encodedwave_horizontal_scale_factor">
               </div>
             </div>
