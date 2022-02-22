@@ -99,9 +99,6 @@ export class SineGenerator extends Block {
         modal.appendChild(this.freq_slider);
     }
 
-    singleClickModal() {
-        return 'sineWaveInput';
-    }
 
     doubleClickModal() {
         return 'sourceWaveGraph';
@@ -118,10 +115,6 @@ export class Sampler extends Block {
 
     sampling_slider_change() {
         let amp = this.value;
-    }
-
-    singleClickModal() {
-        return 'samplerInput';
     }
 
     doubleClickModal() {
@@ -153,6 +146,7 @@ export class ReconstructionFilter extends Block {
     constructor (x, y, w, h) {
         super(x, y, w, h, 'Reconstruction\nFILTER', null, true);
     }
+    doubleClickModal() { return 'reconWaveGraph'; }
 }
 
 export class Encoder extends Block {

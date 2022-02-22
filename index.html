@@ -359,6 +359,53 @@
     </div>
   </div>
 
+  <div class="modal fade" id="reconWaveGraph" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Reconstructed Wave</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body" style="display: block">
+          <div class="" id="canvas-container" style="padding-bottom: 2vh;">
+            <canvas id="reconWaveCanvas"></canvas>
+          </div>
+          <div class="container-variables-wo-border">
+            <div class="variables">
+              <!--
+              <label for="fname" class="varname">Amplitude(V):&nbsp;
+                <span><span id="swAmp">2</span>V</span>
+              </label><br>
+              <div class="slidecontainer">
+                <input type="range" min="2" max="10" step="1" value="2" class="slider" oninput="updateSineAmp(this.value)"
+                  id="swamplitude">
+              </div>
+              <label for="fname" class="varname">Frequency(hz):&nbsp;
+                <span><span id="swFreq">1</span>Hz</span>
+              </label><br>
+              <div class="slidecontainer">
+                <input type="range" min="1" max="20" step="1" value="1" class="slider" oninput="updateSineFreq(this.value)"
+                  id="swfrequency">
+              </div>-->
+              <label for="fname" class="varname">Vertical Scale:</label><br>
+              <div class="slidecontainer">
+                <input type="range" min="1" max="200" step="5" value="51" class="slider" id="reconwave_vertical_scale_factor">
+              </div>
+              <label for="fname" class="varname">Horizontal Scale:</label><br>
+              <div class="slidecontainer">
+                <input type="range" min="10" max="200" step="10" value="10" class="slider" id="reconwave_horizontal_scale_factor">
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script type="module" src="js/main.js"></script>
   <script type="module" src="js/graph.js"></script>
 
