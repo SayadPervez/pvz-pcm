@@ -12,8 +12,8 @@ sampledWaveCanvas.height = canvas_height;
 const wave_amplitude_element = document.getElementById("swamplitude");
 const wave_frequency_element = document.getElementById("swfrequency");
 const sample_frequency_element = document.getElementById("safrequency");
-const vertical_scale_element = document.getElementById("sampledwave_vertical_scale_factor");
-const horizontal_scale_element = document.getElementById("sampledwave_horizontal_scale_factor");
+const vertical_scale_element = document.getElementById("decoderwave_vertical_scale_factor");
+const horizontal_scale_element = document.getElementById("decoderwave_horizontal_scale_factor");
 
 // Draws the axes for the graph
 function drawAxes(ctx, orgx, orgy, line_start, line_end) {
