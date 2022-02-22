@@ -241,10 +241,10 @@
               <div class="slidecontainer">
                 <input type="range" min="2" max="200" step="10" value="50" class="slider" id="sampledwave_horizontal_scale_factor">
               </div>
-              <label class="checkbox-container"><span class="subspan">Enable Sampling</span>
+              <!--<label class="checkbox-container"><span class="subspan">Enable Sampling</span>
                 <input type="checkbox" name="sp" id="sampled_points" onchange="sampCheck()">
                 <span class="checkmark"></span>
-              </label>
+              </label>-->
               </div>
           </div>
         </div>
@@ -265,10 +265,10 @@
         </div>
         <div class="modal-body" style="display: block">
           <p>Number of Quantization levels:&nbsp;<span id="binListSize"></span></p>
-          <label class="checkbox-container"><span class="subspan">Enable Quantization</span>
+          <!--<label class="checkbox-container"><span class="subspan">Enable Quantization</span>
             <input type="checkbox" name="sq" id="quantized_points" onchange="quantCheck()">
             <span class="checkmark"></span>
-          </label>
+          </label>-->
         </div>
           <!-- Modal footer -->
         <div class="modal-footer">
@@ -296,9 +296,9 @@
                 <input type="range" min="5" max="16" step="1" value="8" class="slider" id="bit_length_factor"
                   onchange="dFlag=true;" oninput="updateBitLength(this.value)">
               </div>
-              <label for="fname" class="varname">Vertical Scale:</label><br>
+              <label for="fname" class="varname">Vertical-Scale:</label><br>
               <div class="slidecontainer">
-                <input type="range" min="20" max="200" step="10" value="50" class="slider" id="encodedwave_vertical_scale_factor">
+                <input type="range" min="0.1" max="2" step="0.1" value="1" class="slider" id="encodedwave_vertical_scale_factor">
               </div>
               <label for="fname" class="varname">Horizontal Scale:</label><br>
               <div class="slidecontainer">

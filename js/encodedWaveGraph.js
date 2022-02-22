@@ -140,7 +140,7 @@ function plotPcmWave(ctx, t, x, wave_amplitude, xOffset, yOffset, vertical_scali
         {
             if((bcx==1)&&(binNumbList[idx-1]==0))
             {
-                ctx.lineTo(xOffset + (idx) * horizontal_scaling_factor/bitLength, yOffset - 40 *0);
+                ctx.lineTo(xOffset + (idx) * horizontal_scaling_factor/bitLength, yOffset - 30*vertical_scaling_factor *0);
                 ctx.stroke();
             }
         }
@@ -148,11 +148,11 @@ function plotPcmWave(ctx, t, x, wave_amplitude, xOffset, yOffset, vertical_scali
         {
             if((bcx==0)&&(binNumbList[idx-1]==1))
             {
-                ctx.lineTo(xOffset + (idx) * horizontal_scaling_factor/bitLength, yOffset - 40 *3);
+                ctx.lineTo(xOffset + (idx) * horizontal_scaling_factor/bitLength, yOffset - 30*vertical_scaling_factor *3);
                 ctx.stroke();
             }
         }
-        ctx.lineTo(xOffset + idx * horizontal_scaling_factor/bitLength, yOffset - 40 *3* bcx);
+        ctx.lineTo(xOffset + idx * horizontal_scaling_factor/bitLength, yOffset - 30* vertical_scaling_factor *3* bcx);
         ctx.stroke();
         idx++;
     }
