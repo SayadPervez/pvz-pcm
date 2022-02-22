@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="./css/scrollbars.css">
   <link rel="stylesheet" href="./css/checkmark.css">
   <link rel="stylesheet" href="./css/customslider.css">
+  <script type="module" src="js/mySync.js"></script>
 </head>
 
 <body>
@@ -71,6 +72,24 @@
       sourceGraph.height = canvas_height;
       sourcectx.fillStyle = "red";
       sourcectx.fillRect(0, 0, canvas_width, canvas_height);
+    }
+
+    function vsync(id)
+    {
+      var val = document.getElementById(id).value;
+      document.getElementById("reconwave_vertical_scale_factor").value=Number(val);
+      document.getElementById("quantizedwave_vertical_scale_factor").value=Number(val);
+      document.getElementById("decoderwave_vertical_scale_factor").value=Number(val);
+      document.getElementById("sampledwave_vertical_scale_factor").value=Number(val);
+    }
+
+    function hsync(id)
+    {
+      var val = document.getElementById(id).value;
+      document.getElementById("reconwave_horizontal_scale_factor").value=Number(val);
+      document.getElementById("quantizedwave_horizontal_scale_factor").value=Number(val);
+      document.getElementById("decoderwave_horizontal_scale_factor").value=Number(val);
+      document.getElementById("sampledwave_horizontal_scale_factor").value=Number(val);
     }
 </script>
   <h1 class="title main-title">Pulse Code Modulation</h1>
@@ -196,7 +215,7 @@
               </div>
               <label for="fname" class="varname">Vertical Scale:</label><br>
               <div class="slidecontainer">
-                <input type="range" min="1" max="200" step="5" value="51" class="slider" id="sourcewave_vertical_scale_factor">
+                <input type="range" min="5" max="200" step="5" value="50" class="slider" id="sourcewave_vertical_scale_factor">
               </div>
               <label for="fname" class="varname">Horizontal Scale:</label><br>
               <div class="slidecontainer">
@@ -235,11 +254,11 @@
               </div>
               <label for="fname" class="varname">Vertical Scale:</label><br>
               <div class="slidecontainer">
-                <input type="range" min="20" max="200" step="10" value="50" class="slider" id="sampledwave_vertical_scale_factor">
+                <input  onchange="vsync(this.id)" type="range" min="5" max="200" step="5" value="50" class="slider" id="sampledwave_vertical_scale_factor">
               </div>
               <label for="fname" class="varname">Horizontal Scale:</label><br>
               <div class="slidecontainer">
-                <input type="range" min="2" max="200" step="10" value="50" class="slider" id="sampledwave_horizontal_scale_factor">
+                <input onchange="hsync(this.id)"  type="range" min="10" max="200" step="10" value="40" class="slider" id="sampledwave_horizontal_scale_factor">
               </div>
               </div>
           </div>
@@ -267,11 +286,11 @@
             <div class="variables">
               <label for="fname" class="varname">Vertical Scale:</label><br>
               <div class="slidecontainer">
-                <input type="range" min="20" max="200" step="10" value="50" class="slider" id="decoderwave_vertical_scale_factor">
+                <input onchange="vsync(this.id)"  type="range" min="5" max="200" step="5" value="50" class="slider" id="decoderwave_vertical_scale_factor">
               </div>
               <label for="fname" class="varname">Horizontal Scale:</label><br>
               <div class="slidecontainer">
-                <input type="range" min="2" max="200" step="10" value="50" class="slider" id="decoderwave_horizontal_scale_factor">
+                <input onchange="hsync(this.id)"  type="range" min="10" max="200" step="10" value="40" class="slider" id="decoderwave_horizontal_scale_factor">
               </div>
               </div>
           </div>
@@ -300,11 +319,11 @@
                   <p><strong>Number of Quantization levels : </strong><span id="binListSize"></span></p>
                   <label for="fname" class="varname">Vertical Scale:</label><br>
                   <div class="slidecontainer">
-                    <input type="range" min="5" max="200" step="5" value="51" class="slider" id="quantizedwave_vertical_scale_factor">
+                    <input onchange="vsync(this.id)"  type="range" min="5" max="200" step="5" value="50" class="slider" id="quantizedwave_vertical_scale_factor">
                   </div>
                   <label for="fname" class="varname">Horizontal Scale:</label><br>
                   <div class="slidecontainer">
-                    <input type="range" min="2" max="200" step="10" value="50" class="slider" id="quantizedwave_horizontal_scale_factor">
+                    <input  onchange="hsync(this.id)" type="range" min="10" max="200" step="10" value="40" class="slider" id="quantizedwave_horizontal_scale_factor">
                   </div>
                   </div>
               </div>
@@ -368,28 +387,13 @@
           </div>
           <div class="container-variables-wo-border">
             <div class="variables">
-              <!--
-              <label for="fname" class="varname">Amplitude(V):&nbsp;
-                <span><span id="swAmp">2</span>V</span>
-              </label><br>
-              <div class="slidecontainer">
-                <input type="range" min="2" max="10" step="1" value="2" class="slider" oninput="updateSineAmp(this.value)"
-                  id="swamplitude">
-              </div>
-              <label for="fname" class="varname">Frequency(hz):&nbsp;
-                <span><span id="swFreq">1</span>Hz</span>
-              </label><br>
-              <div class="slidecontainer">
-                <input type="range" min="1" max="20" step="1" value="1" class="slider" oninput="updateSineFreq(this.value)"
-                  id="swfrequency">
-              </div>-->
               <label for="fname" class="varname">Vertical Scale:</label><br>
               <div class="slidecontainer">
-                <input type="range" min="5" max="200" step="5" value="50" class="slider" id="reconwave_vertical_scale_factor">
+                <input onchange="vsync(this.id)" type="range" min="5" max="200" step="5" value="50" class="slider" id="reconwave_vertical_scale_factor">
               </div>
               <label for="fname" class="varname">Horizontal Scale:</label><br>
               <div class="slidecontainer">
-                <input type="range" min="10" max="200" step="10" value="50" class="slider" id="reconwave_horizontal_scale_factor">
+                <input onchange="hsync(this.id)"  type="range" min="10" max="200" step="10" value="40" class="slider" id="reconwave_horizontal_scale_factor">
               </div>
             </div>
           </div>
