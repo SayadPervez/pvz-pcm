@@ -12,7 +12,6 @@ let bit_length_element = document.getElementById("BL");
 let check_unsampled_wave = document.getElementById("unsampled_wave");
 let check_sampled_points = document.getElementById("sampled_points");
 let check_quantized_points = document.getElementById("quantized_points");
-let check_staircase_wave = document.getElementById("staircase_wave");
 let check_pcm_wave = document.getElementById("pcm_wave");
 
 let canvas_width = canvas.parentElement.clientWidth||1200;
@@ -87,34 +86,6 @@ function xrange(start, stop, step) {
     return res;
 }
 
-function plotStairCase(arr) {
-    ctx.beginPath();
-    ctx.strokeStyle = "blue";
-    ctx.stroke();
-    ctx.moveTo(orgx, orgy);
-
-    // Scale the values in the array for plotting
-    arr.forEach((_, idx) => {
-        arr[idx] *= vertical_scaling_factor;
-    });
-
-    ctx.lineWidth = 1;
-
-    var px = orgx;
-    var py = arr[0];
-
-    for (var i = 1; i < arr.length; i++) {
-        var xoff = i * horizontal_scaling_factor;
-        ctx.lineTo(xoff + orgx, orgy - py);
-        ctx.lineTo(xoff + orgx, orgy - arr[i]);
-        px = xoff;
-        py = arr[i];
-    }
-
-    ctx.stroke();
-    ctx.closePath();
-}
-
 function plotSine(ctx, xOffset, yOffset) {
     var width = 1000;
     var amplitude = wave_amplitude.value;
@@ -128,8 +99,8 @@ function plotSine(ctx, xOffset, yOffset) {
     t.forEach((val) => {
         x.push(amplitude * Math.sin(2 * Math.PI * frequency * val));
     });
-    console.log('t size is ', t.length);
-    console.log('x size is ', x.length);
+    //console.log('t size is ', t.length);
+    //console.log('x size is ', x.length);
 
     ctx.beginPath();
     ctx.lineWidth = 2;
@@ -296,3 +267,7 @@ function setupModal(event) {
 export function getBinLengthSize() { return gbinlengthsize; }
 
 document.getElementById("button1").onclick = setupModal;
+
+
+// Order :
+// draw() -> drawGraph() -> plotSine() ->  -> draw()
