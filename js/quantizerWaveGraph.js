@@ -96,18 +96,6 @@ function plotSine(ctx, amplitude, frequency, xOffset, yOffset, vertical_scaling_
 
 
     ctx.beginPath();
-    ctx.lineWidth = 2;
-    ctx.strokeStyle = "red";
-
-    var idx = 0;
-    if (true) {
-        while (idx < width) {
-            ctx.lineTo(xOffset + idx * horizontal_scaling_factor, yOffset - vertical_scaling_factor * x[idx]);
-            idx++;
-        }
-    }
-    ctx.stroke();
-    ctx.save();
     var q = [];
     var delta = ((2 * Math.PI * amplitude * frequency) / Fs).toFixed(4);
     if (true) {
