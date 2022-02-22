@@ -107,6 +107,7 @@ function plotLollipop(ctx, amplitude, frequency, xOffset, yOffset, vertical_scal
     ctx.fillStyle = "black";
     ctx.fillText(`Amplitude: ${amplitude}v`, canvas_width - 200, 50, 110);
     ctx.fillText(`Frequency: ${frequency}hz`, canvas_width - 200, 80, 110);
+    ctx.fillText(`Sampling Frequency: ${Fs}Hz`, canvas_width - 270, 110, 180);
     ctx.closePath();
 }
 
