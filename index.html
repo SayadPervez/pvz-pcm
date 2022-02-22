@@ -256,6 +256,49 @@
     </div>
   </div>
 
+  <div class="modal fade" id="decoderWaveGraph" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Decoded Wave</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body" style="display: block">
+          <div class="" id="canvas-container" style="padding-bottom: 2vh;">
+            <canvas id="decoderWaveCanvas"></canvas>
+          </div>
+          <div class="container-variables-wo-border">
+            <div class="variables">
+              <!--<label for="fname" class="varname">Sampling Frequency(hz):&nbsp;
+                <span id="saFreq">20</span>
+              </label><br>
+              <div class="slidecontainer">
+                <input type="range" min="20" max="200" step="1" value="20" class="slider" oninput="updateSampFreq(this.value)"
+                  id="safrequency">
+              </div>-->
+              <label for="fname" class="varname">Vertical Scale:</label><br>
+              <div class="slidecontainer">
+                <input type="range" min="20" max="200" step="10" value="50" class="slider" id="sampledwave_vertical_scale_factor">
+              </div>
+              <label for="fname" class="varname">Horizontal Scale:</label><br>
+              <div class="slidecontainer">
+                <input type="range" min="2" max="200" step="10" value="50" class="slider" id="sampledwave_horizontal_scale_factor">
+              </div>
+              <!--<label class="checkbox-container"><span class="subspan">Enable Sampling</span>
+                <input type="checkbox" name="sp" id="sampled_points" onchange="sampCheck()">
+                <span class="checkmark"></span>
+              </label>-->
+              </div>
+          </div>
+        </div>
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="modal fade" id="quantizerOutput" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">

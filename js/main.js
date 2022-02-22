@@ -4,6 +4,7 @@ import { drawSourceWave } from './sourceWaveGraph.js';
 import { drawSampledWave } from './sampledWaveGraph.js';
 import { drawEncodedWave, getQuantizationLevels } from './encodedWaveGraph.js';
 import { Line } from './Line.js';
+import { drawDecoderWave } from './decoderWaveGraph.js';
 
 let myblocks = new Map();
 let currentModal = null;
@@ -150,6 +151,8 @@ function openModal(obj, dblClick = false) {
             drawSourceWave();
         } else if (modalName === '#sampledWaveGraph') {
             drawSampledWave();
+        } else if (modalName === '#decoderWaveGraph') {
+            drawDecoderWave();
         } else if (modalName === '#quantizerOutput') {
             const binLength = getQuantizationLevels();
             document.getElementById('binListSize').innerHTML = binLength;

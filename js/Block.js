@@ -167,4 +167,7 @@ export class Decoder extends Block {
     constructor (x, y, w, h) {
         super(x, y, w, h, 'DECODER', null, true);
     }
+    doubleClickModal() {
+        return 'decoderWaveGraph';
+    }
 }
