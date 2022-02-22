@@ -159,7 +159,6 @@ function openModal(obj, dblClick = false) {
             drawReconWave();
         } else if (modalName === '#quantizerOutput') {
             const binLength = getQuantizationLevels();
-            document.getElementById('binListSize').innerHTML = binLength;
             drawQuantizedWave();
         } else if (modalName == '#encodedWaveGraph') {
             drawEncodedWave();
