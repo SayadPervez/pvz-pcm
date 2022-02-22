@@ -49,7 +49,7 @@
       isSamplingOn = !isSamplingOn;
     }
     function updateSineAmp(value) {
-      document.getElementById("swAmp").innerHTML = value;
+      document.getElementById("swAmp").innerHTML = value*2;
     }
     function updateSineFreq(value) {
       document.getElementById("swFreq").innerHTML = value;
@@ -202,7 +202,7 @@
                 <span><span id="swAmp">2</span>V</span>
               </label><br>
               <div class="slidecontainer">
-                <input type="range" min="2" max="10" step="1" value="2" class="slider" oninput="updateSineAmp(this.value)"
+                <input type="range" min="1" max="10" step="1" value="1" class="slider" oninput="updateSineAmp(this.value)"
                   id="swamplitude">
               </div>
               <label for="fname" class="varname">Frequency(hz):&nbsp;

@@ -127,7 +127,7 @@ export function getQuantizationLevels() {
 }
 
 export function drawReconWave() {
-    var wave_amplitude = wave_amplitude_element.value;
+    var wave_amplitude = wave_amplitude_element.value*2;
     var wave_frequency = wave_frequency_element.value;
     var vertical_scaling_factor = vertical_scale_element.value;
     var horizontal_scaling_factor = horizontal_scale_element.value;

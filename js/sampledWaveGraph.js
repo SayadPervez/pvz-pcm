@@ -114,7 +114,7 @@ function plotLollipop(ctx, amplitude, frequency, xOffset, yOffset, vertical_scal
 let size_set = false;
 
 export function drawSampledWave() {
-    const wave_amplitude = wave_amplitude_element.value;
+    const wave_amplitude = wave_amplitude_element.value*2;
     const wave_frequency = wave_frequency_element.value;
     const vertical_scaling_factor = vertical_scale_element.value;
     const horizontal_scaling_factor = horizontal_scale_element.value;
