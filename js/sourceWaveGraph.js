@@ -104,7 +104,7 @@ function plotSine(ctx, amplitude, frequency, xOffset, yOffset, vertical_scaling_
     ctx.font = "20px Arial";
     ctx.fillStyle = "black";
     ctx.fillText(`Amplitude: ${amplitude}v`, canvas_width - 200, 50, 110);
-    ctx.fillText(`Frequency: ${frequency}hz`, canvas_width - 200, 80, 110);
+    ctx.fillText(`Frequency: ${frequency}Hz`, canvas_width - 200, 80, 110);
     ctx.closePath();
 }
 
