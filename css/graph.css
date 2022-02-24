@@ -24,11 +24,9 @@ body {
 }
 
 .container-variables {
-    border-left: 2px solid black;
-    width: 80%;
-    line-height: 0.7;
     padding-top:1.5rem;
     padding-left: 4.5rem;
+    display:none;
 }
 
 .container-variables-wo-border {
@@ -37,30 +35,29 @@ body {
 }
 
 .container-result {
-    border-left: 2px solid black;
     width: max-content;
     max-width: 100%;
     padding:1.5rem 2rem;
-    padding-right:1rem;
 }
 
 #container-checkbox{
-    width: max-content;
-    max-width: 100%;
+    width:0;
+    height:0;
     padding:1.5rem 3rem;
     padding-right:1rem;
+    display: none;
 }
 
 .modal-body {
     padding: 0.5rem !important;
 }
-
+/*
 #container-split{
     display: grid;
     grid-template-columns: 30% 40% 30%;
     height: 30% !important;
 }
-
+*/
 #canvas {
     border-bottom: 2px solid black;
     margin: 0px auto;
