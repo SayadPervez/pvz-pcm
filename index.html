@@ -50,15 +50,19 @@
     }
     function updateSineAmp(value) {
       document.getElementById("swAmp").innerHTML = value*2;
+      document.getElementById("amplitude").value = value;
     }
     function updateSineFreq(value) {
       document.getElementById("swFreq").innerHTML = value;
+      document.getElementById("frequency").value = value;
     }
     function updateSampFreq(value) {
       document.getElementById("saFreq").innerHTML = value;
+      document.getElementById("sampling_frequency").value = value;
     }
     function updateBitLength(value) {
       document.getElementById("bitlength").innerHTML = value;
+      document.getElementById("bit_length_factor").value = value;
     }
     function showsourcecanvas() {
       let sourceGraph = document.getElementById('sourceWaveCanvas');
@@ -80,7 +84,7 @@
       document.getElementById("quantizedwave_vertical_scale_factor").value=Number(val);
       document.getElementById("decoderwave_vertical_scale_factor").value=Number(val);
       document.getElementById("sampledwave_vertical_scale_factor").value=Number(val);
-      document.getElementById("vertical_scale_factor").value=Number(val);
+      document.getElementById("vertical_scale_factor").value=Number(val)*2;
     }
 
     function hsync(id)
