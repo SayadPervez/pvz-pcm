@@ -72,7 +72,7 @@ class Block {
 
 export class SineGenerator extends Block {
     constructor (x, y, w, h) {
-        super(x, y, w, h, 'SINE\nGENERATOR', null, true);
+        super(x, y, w, h, 'SINE WAVE\nGENERATOR', null, true);
         this.amp_slider = createSlider(0, 5000, 500);
         this.amp_slider.onchange = (evt) => {
             this.amplitude = int(evt.target.value);
