@@ -1,38 +1,41 @@
 # StoryBoard
 
-#### Proposal ID : **NITK_PALS21_037**
+#### Proposal ID : **`CHANGE ME AAAAAAH`**
 
-#### Experiment Name : ***Amplitude Modulation and Demodulation***
+#### Experiment Name : ***Pulse Code Modulation and Demodulation***
 
 
 #### Story Outline:
-##### **This experiment focuses on understanding the principle of amplitude modulation & demodulation.  This experiment is formulated to study the performance of various types of amplitude modulation schemes (DSB-FC, DSB-SC & SSB) for different modulation index and also its impact on modulated signal can be analyzed. Furthermore, the  modulation index, efficacy and the   total transmitted power for each category of the amplitude modulation can be estimated and verified.**
+##### **Pulse code modulation (PCM) is a type of analog to digital (A/D) conversion technique in which the input analog signal is sampled at regular intervals and the information in each sample is represented in digital form. The goal of this experiment is to understand the basic principle of pulse code modulation (PCM) and demodulation and how well the analog signal at the transmitter is converted into n-bit binary (digital) using a sampler, quantizer and encoder. Sampling is the process of converting continuous time signals into discrete time signals. The continuous amplitude signal is converted into discrete amplitude signal by means of quantizer and the signal discrete in both time and amplitude into digital using encoder. The baseband signal at the receiver is retrieved from the encoded binary data by using decoder and reconstruction filter. The required transmission bandwidth, signaling rate, step size and signal to quantization noise ratio (SQNR) are examined to evaluate the performance of the PCM system.**
 
 #### Story:
 
-##### **The simulator workspace comprises blocks that the end user may drag and drop into the workspace according to a predefined procedure. Amplitude modulation may be done in three ways: DSB-FC, DSB-SC, and SSB-SC. The user can start with the block connections based on the type of modulation he or she prefers. When selecting the sine wave generator block, the end user may input their preferred values for the attributes (fixed amplitude, frequency, etc.) in the corresponding fields (Amplitude, Frequency).While performing each subcategory of amplitude modulation, the user may observe the power and modulation index for each subcategory by clicking on the relevant modulation/demodulation blocks. The modulation index can also be classified as over , under, or critical modulation by the simulator. For demodulation, under each category, demodulation blocks are made available and may be dragged & dropped in the workspace by the user , and the connections are established  based on the instructions mentioned in the  procedure ,so as to extract the message signal from the modulated signal of the category. The simulator also calculates the efficacy of amplitude modulation/demodulation under each subcategory using the original message signal and the message signal extracted from the modulated signal.**
+##### **The simulator workspace comprises the blocks such as sine wave generator, sampler, quantizer, encoder, decoder, reconstruction filter and evaluate block. The position of the blocks are static and wires are to be connected by the user as per the block diagram to perform pulse code modulation and demodulation. The user has to set the amplitude and frequency parameters of input blocks to perform the simulation and view the output of pulse code modulation and demodulation. The parameters such as Transmission Bandwidth, step size, signaling rate and signal to quantization noise ratio can be observed using the “Evaluate” block.**
 
 
 
 #### Set User Objectives & Goals:
 
-##### **1) Understand the principle of amplitude modulation (AM) and demodulation.**
-##### **2) Select the type of sinusoidal signal to be used as modulating and carrier signal.**
-##### **3) Recall the conditions for perfect modulation and choose the amplitude and frequency of the modulating and carrier signal by satisfying the conditions (fc>>fm and Ac >>Am).**
-##### **4) Calculate the modulation index (mu) and check whether under modulation condition is satisfied for   perfect recovery of signal at the receiver end.**
-##### **5) Analyze the AM modulation for different modulation indices (mu=1, mu>1 & mu<1).**
-##### **6) Analyze the types of AM such as DSB-FC, DSB-SC and SSB-SC in time  domain.**  
-##### **7) Calculate the total power consumption and efficiency for all the types of amplitude modulation scheme for performance comparison.**
+##### **1) State the principle of pulse code modulation and demodulation**
+##### **2) Recall sampling, quantization, encoding and decoding process for analog to digital conversion.**
+##### **3) Calculate the required transmission bandwidth and signaling rate of PCM signal.**
+##### **4) Analyze the performance of the PCM system by varying the frequency and amplitude of the input baseband signal.**
+##### **5) Evaluate signal to quantization ratio (SQNR) of PCM signal to analyze the efficacy of PCM.**
 
 #### Pathway activities:
 
 
-##### **1) The students will have to browse through the theory and procedure by navigating to theory icon and clicking on it, so as  to guide the student in  performing the process of simulating amplitude modulation & demodulation with ease.**
-##### **2) The students should then choose  an appropriate value as the input signal frequency so that the input signal modulates the carrier signal with proper amplitude and frequency values.**
-##### **3) The students would then compute the modulation index manually for the specified inputs manually and compare the same with the simulation generated modulation index (purely for improving conceptual clarity in the topic).**
-##### **4) The students would then  be  given the liberty to choose the type of modulation based on the layout diagram prescribed for the type and record the output for the same.**
+##### 1) Students should click on the theory icon to browse through the theory and procedure for simulating Pulse Code Modulation and Demodulation.
+##### 2) The user should next connect the blocks as per the block diagram. This is done by clicking the connection points (red circles on every block) in the correct order.
+##### 3) Double click the sine wave generator block to set the amplitude and frequency of the input signal.
+##### 4) Double click the sampler block to set the frequency of the sampler(sampling frequency).
+##### 5) Double click the quantizer block to view the discrete representation of input sine wave.
+##### 6) Double click the encoder block to observe the binary representation of PCM waves for various bit lengths.
+##### 7) Double click the decoder block and reconstruction filter block to retrieve the input sine waveform.
+##### 8) Double click the “Evaluate” block to view the overall PCM plot and transmission bandwidth, step size, signaling rate and SQNR of the system are observed.
+##### 9) Vary the amplitude and frequency of input sine wave and sampling frequency to observe the simulated result for various input parameters.
+##### 10) Calculate the parameters such as transmission bandwidth, step size, signaling rate and SQNR for the proposed circuit and compare the same with the simulation generated values.
 
-##### **5)The students should then calculate the power values for all the types of modulation and find the efficiency and conclude the best modulation technique based on the computed values(manually& compare the same with the simulation generated values) for the same.**
 
 #### Set Challenges and Questions/Complexity/variation
 ### **Pre Test Section :**
@@ -41,120 +44,63 @@
 ##### ***These questions are asked to examine the Theoretical knowledge absorbed by the user  during the theory class.***
 ##### ***Please do answer all the questions below within the allocated time to avoid any errors.***
 
-##### Number of Questions:10
+##### Number of Questions:5
 ##### Question Pattern: MCQ
 
 
 #### **Quick Quiz**
-##### 1.	What is the need of modulation?
- ***A.	Reduces the antenna height***
+##### 1.	Identify the suitable digital pulse modulation which represent the signal in the form of sequence of coded pulses.?
+ A.	AM
 
- B.	Increases the antenna height
+ B.	FM
 
- C.	Short distance communication
+ C.	PM
 
- D.	Increase the interference power
-
-
-
-##### 2.	What are the types of analog modulation schemes?
- A.	Phase modulation
-
- B.	Frequency modulation
-
- C.	Amplitude modulation
-
- ***D.	 All of the above***
+ ***D.	PCM***
 
 
 
-##### 3.	Identify the characteristics of Amplitude modulation.
- A.	Modulating signal amplitude is varied w.r.t carrier signal
+##### 2.	Calculate the signal to quantization noise ratio of 7- bit PCM system for the message bandwidth of 500 Hz.
+ A.	53.8 dB
 
-***B. Carrier signal amplitude is varied w.r.t modulating signal***
+ ***B.	43.8 dB***
 
- C.	Modulated signal amplitude remains constant.
+ C.	63.8 dB
 
- D.	Modulated signal frequency and phase also varying
-
-
-
-#####  4.	What is the bandwidth requirement of DSB-SC and SSB?
- A.	fm & fm
-
- B.	fm & 2fm
-
- C.	4fm & 2fm
-
-***D.	2fm & fm***
+ D.	33.8 dB
 
 
 
-##### 5.	For under modulation, what is the value of modulation index?
- A.	m= 1
+##### 3.	What is the drawback of PCM ?
+ A.	Increased delay
 
- B.	m>1
+***B. Increased bandwidth***
 
- ***C.	m<1***
+ C.	Analog Output
 
- D.	m=0
-
-
-
-
-##### 6.	The process of retrieving modulating signal from the modulated wave is called as
- A.	Modulation
-
- ***B.	Detection***
-
- C.	Multiplexing
-
- D.	Demultiplexing
+ D.	Digital Output
 
 
 
-##### 7.	The modulating signal is not preserved from the envelope of an AM signal If modulation index is
-***A.	greater than 1***
+#####  4.	Find the transmission bandwidth and signaling rate of 9- bit PCM for the message bandwidth of 800Hz.
+ ***A.	7.2KHz, 14.4Kbps***
 
- B.	Less than 1
+ B.	8KHz,16Kbps
 
- C.	Equal to 1
+ C.	6kHz, 3Kbps
 
- D.	Equal to 0
-
-
-
-##### 8.	What is the maximum transmission efficiency of DSB-FC?
-A : 44.4%
-
-B: 55.5%
-
-***C: 33.33%***
-
-D: 64.44%
-
-
-##### 9.	Identify the drawback of SSB modulation.
-***A.	Carrier to be locally generated at the receiver***
-
-B.	High bandwidth
-
-C.	High transmit power
-
-D.	Low efficiency
+ D.	9.2 KHz, 9.2Kbps
 
 
 
+##### 5.	Identify the block in PCM which converts continuous amplitude samples into discrete amplitude samples.
+ A.	Sampler
 
-##### 10.	Define Modulation index of AM
- A.	Ac/Am
+ B.	Encoder
 
- ***B.	Am/Ac***
+ ***C.	Quantizer***
 
- C.	2Am/Ac
-
- D.	Am/2Ac
-
+ D.	Repeater
 
 
 ### **Post Test Section**
@@ -162,11 +108,13 @@ D.	Low efficiency
 ##### ***These questions are asked to check the knowledge attained by the user after performing the experiment.***
 ##### ***Please do answer all the questions below within the allocated time to avoid any errors.***
 
-##### Number of Questions:10
+##### Number of Questions: **`CHANGE ME AAAAAAH`**
 ##### Question Pattern: MCQ
 
 #### **Quick Quiz**
-
+#### **`Waiting for POSTTEST QUESTIONS`**
+#### **`Change the below section. AAAAAAAAAAAH`**
+```
 ##### 1. The frequency and amplitude of the carrier signal should be _______ compared to baseband signal.
  ***A.	Greater than***
 
@@ -216,83 +164,23 @@ B.     Switching modulator
 ***C.      Envelope detector***
 
  D.      Square law modulator
-
-
-##### 6. The DSB-FC spectrum consists of:
- A. Upper sideband only
-
- B. Lower sideband only
-
- C. Carrier frequency only
-
- ***D. All of the Above***
-
-
-##### 7. Identify the modulation scheme that uses more bandwidth and transmitted power.
- ***A.	DSB-FC***
-
-B.	DSB-SC
-
-C.	SSB-SC
-
-D.	Both A&B
-
-
-
-##### 8. Calculate the total transmitted power of DSB-FC modulated signal with the carrier power of 8 W and modulation index of 0.5.
- A. 4W
-
- ***B. 9W***
-
- C. 7W
-
- D. 8W
-
-
-
-##### 9. The modulating signal frequency and the carrier frequency of an AM broadcast station are 5KHz & 20KHz respectively. Calculate the upper & lower sideband frequencies and the total bandwidth.
- A. 20KHz, 30KHZ, 5KHz
-
- B. 10KHz, 5KHz, 10KHz
-
- ***C. 25KHz, 15KHz, 10KHz***
-
- D. 40KHz, 20KHz, 5KHz
-
-
-
-##### 10. Find the total modulation Index of AM system when a carrier wave is modulated by two modulating signals with modulation indices 0.4 and 0.3.
-A. 0.3
-
-B. 0.4
-
-C. 0.25
-
-***D. 0.5***
-
+```
 
 #### Conclusion:
 
-##### By doing the above experiment the user would get familiarized with the below points
-
-**1. Display of modulating, carrier signals, Modulated (DSB-FC, DSB-SC, SSB-SC) and demodulated    waveforms in time domain.**
-
-**2. Calculation of modulation index, carrier power, sideband powers, total power, and efficiency.**
-
-**3. Verification of degrees of modulation (over, under, critical)**
-
-
-
+**By doing the above experiment the user would get familiarized with the concept of pulse code modulation and demodulation.**
 ##### **Time required to perform the virtual experiment.**
-***The approximate time required to understand the procedure to perform the experiment would take about 5 min. To connect the circuit for AM modulation & demodulation will take another 5 min. Analyzing the practical output with theory calculations (Power estimation) will take 5 min. Answering the assessment questions will take about 5 min. Thus, the total time required to perform the experiment will require around 20 min.***
+**The approximate time required to understand the procedure to perform the  experiment would take about 5 min. To connect all the different blocks and to set the input parameter for modulation & demodulation will take another 7 min. Analyzing the output with theory calculations will take 5 min. Answering the assessment questions will take about 5 min. The total time needed to perform the experiment is around 22 mins.**
+
 
 #### Equations/formulas:
 
 | **Theory**     | **Formulae** |   **Description**|
 | :-----------: | :------------: | :-----------: |
-|**Total power/Modulation Index Calculation for DSB-FC:**     | **Pt=Pc[1+(mu x mu)/2],N=[(mu x mu)/2+(mu x mu)]**  |   **Pc🡪 Carrier signal Power,Pt🡪 Total Power of DSB-FC Signal,mu🡪 Modulation Index,N 🡪Efficiency**|
-| **Total power /Modulation Index Calculation for DSB-SC:**   | **Pt’=[(mu x mu)  x (VC x VC)]/4=>Pc x (mu x mu)/2,N= [2/2+(mu x mu)]**      |       **Pc🡪  Carrier signal Power,Pt’🡪 Total Power of DSB-SC Signal,mu🡪 Modulation Index,N 🡪Efficiency**|
-| **Total power/Modulation Index Calculation for SSB/SSB-SC:**   | **Pt’’=[(mu x mu)  x (VC x VC)]/8=>Pc x (mu x mu)/4,N=[4+(mu x mu)/4+(2 x (mu x mu))]**      |       **Pc🡪  Carrier signal Power,Pt’🡪 Total Power of DSB-SC Signal,mu🡪 Modulation Index,N 🡪Efficiency**          |
+|**Transmission Bandwidth, Bt (Hz)**     | **Bt = nW**  |   **n🡪 number of bits/sample, W🡪 Message Bandwidth**|
+| **Step Size, S (V)**   | **S=(2*Amax)/L**      |       **Amax🡪  Maximum Amplitude of the input signal, L🡪 Number of quantization levels**|
+| **Signaling Rate, r (bits/sec)**   | **r = 2nW**      |       **n🡪 number of bits/sample, W🡪 Message Bandwidth**          |
+| **Signal to quantization noise ratio, SQNR (dB)**   | **SQNR = 1.8 + 6n**      |       **n🡪 number of bits/sample**          |
 
 #### Flowchart:
 
