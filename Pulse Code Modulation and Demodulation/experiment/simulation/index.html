@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- BOOTSTRAP STUFF -->
+	<meta charset="utf-8">
+	<meta name="description"
+		content="A AM Modulator and Demodulator Simulator made with p5.js library, useful for educational use.">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/simstyle.css">
+	<script src="js/jquery-3.3.1.slim.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+	<script src="js/html2canvas.js">
+	</script>
+
+	<!-- validate -->
+	<script src="js/validate.js"></script>
+
+
+	<!--screenshot-->
+	<script src="js/screenshot.js"></script>
+
+
+	<!-- p5 stuff -->
+	<script src="js/p5.min.js"></script>
+	<!-- Simulator stuff -->
+	<script type="module" src="js/simulator.js"></script>
+	<title>AM Simulator</title>
+</head>
+
+<body>
+	<!-- Fixed navbar -->
+	<nav class="navbar navbar-expand-md navbar-dark ">
+		<a class="navbar-brand text-center" href="#">
+			&nbsp; AM MODULATOR<br>&nbsp;DEMODULATOR
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+			aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarCollapse">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item">
+					<div class="navGroupTools" style="float : right;">
+						<button type="button" class="btn btn-outline-light Edit active" tool="Edit"
+							onclick="activeTool(this)">
+							<i class="fa fa-edit"></i>
+							Edit
+						</button>
+						<button type="button" class="btn btn-outline-light" tool="Delete" onclick="activeTool(this)"">
+              				<i class=" fa fa-trash-o"></i>
+							Delete
+						</button>
+
+					</div>
+					</a>
+				</li>
+			</ul>
+
+			<div class="modal fade bd-example-modal-md" id="exampleModalCenter1" tabindex="-1" role="dialog"
+				aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLongTitle">QUIZ TIME</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<form action="">
+								<br>
+								<div class="switch-field">
+								<label>DSB-FC wave consistes of carrier and two sidebands.</label><br>
+								<input  type="radio" id="radio-one" name="switch-one" value="True">
+								<label id = "radio-o" for="radio-one">True</label><br>
+								<input type="radio" id="radio-two" name="switch-one"  value="False">
+								<label id = "radio-t" for="radio-two">False</label><br>
+								</div>
+								<br>
+
+
+
+								<p id="Answer1"></p>
+
+							</form>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-primary" onclick="return validate1()">Submit</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--Modal dsbsc quiz-->
+			<div class="modal fade bd-example-modal-md" id="exampleModalCenter2" tabindex="-1" role="dialog"
+				aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLongTitle">QUIZ TIME</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<form action="">
+								<br>
+								<div class="switch-field">
+								<label>Adding a carrier signal to DSB-SC results in</label><br>
+								<input  type="radio" id="dsbsc" name="switch-one" value="dsbsc" />
+								<label id = "radio-o" for="dsbsc">DSB-SC</label><br>
+								<input type="radio" id="dsbfc" name="switch-one" value="dsbfc" />
+								<label id = "radio-t" for="dsbfc">DSB-FC</label><br>
+								</div>
+
+								<br>
+								<p id="Answer2"></p>
+
+							</form>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-primary" onclick="return validate2()">Submit</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--Modal SSB quiz-->
+			<div class="modal fade bd-example-modal-md" id="exampleModalCenter3" tabindex="-1" role="dialog"
+				aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLongTitle">QUIZ TIME</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<form action="">
+								<br>
+								<div class="switch-field">
+								<label>For SSB generation, which modulated signal should be used?</label><br>
+								<input  type="radio" id="DSB-SC" name="switch-one" value="DSB-SC">
+								<label id = "radio-o" for="DSB-SC">DSB-SC</label><br>
+								<input type="radio" id="DSB-FC" name="switch-one" value="DSB-FC">
+								<label id = "radio-t" for="DSB-FC">DSB-FC</label><br>
+								</div>
+								<br>
+
+
+								<p id="Answer3"></p>
+							</form>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-primary" onclick="return validate3()">Submit</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+	</nav>
+	<!-- Begin page content -->
+	<div class="container-fluid pt-3">
+		<div class="row">
+			<div class="tools col-0 ml-2 pr-2 overflow-scroll" id="sidebar"
+				style="overflow-y: scroll;height: calc(100vh - 5rem);">
+				<div class="list-group float-right" style="min-width: 160px; max-width: 160px">
+					<div id="externalInput" style="display: none">
+						<div class="list-group-item list-group-item-action pl-1">
+							<h5>FG Settings</h5>
+							<h6>Frequency</h6>
+							<div class="input-group mb-3">
+								<input type="number" class="form-control freq" value="1000" min="0" id="freqExt">
+								<div class="input-group-append">
+									<span class="input-group-text">Hz</span>
+								</div>
+							</div>
+							<h6>Amplitude</h6>
+							<div class="input-group mb-3">
+								<input type="number" class="form-control amplitude" value="50" min="0" max="100"
+									id="amplExt">
+								<div class="input-group-append">
+									<span class="input-group-text">V</span>
+								</div>
+							</div>
+							<button type="button" class="btn btn-primary" id="setbtn" data-dismiss="modal">Set</button>
+						</div>
+					</div>
+					<button type="button" data-target="#FGSettings" data-toggle="modal" title="FG"
+						class="list-group-item list-group-item-action pl-1" id="FG1">
+						<img src="images/FG.png" class="ml-2" width="90">
+					</button>
+					<button type="button" tool="Adder" title="Adder" onclick="activeTool(this)"
+						class="list-group-item list-group-item-action pl-1">
+						<img src="images/Adder.png" class="ml-2" width="90">
+					</button>
+					<button type="button" tool="Modulator" title="Modulator" onclick="activeTool(this)"
+						class="list-group-item list-group-item-action pl-1">
+						<img src="images/Modulator.png" class="ml-2" width="90">
+					</button>
+					<button type="button" tool="Filter" title="Filter" onclick="activeTool(this)"
+						class="list-group-item list-group-item-action pl-1">
+						<img src="images/Filter.png" class="ml-2" width="90">
+					</button>
+					<button type="button" tool="DSBFC-Output" title="DSBFC-Output" onclick="activeTool(this)"
+						class="list-group-item list-group-item-action pl-1">
+						<img src="images/DSBFC-Output.png" class="ml-2" width="90">
+					</button>
+					<button type="button" tool="DSBSC-Output" title="DSBSC-Output" onclick="activeTool(this)"
+						class="list-group-item list-group-item-action pl-1">
+						<img src="images/DSBSC-Output.png" class="ml-2" width="90">
+					</button>
+					<button type="button" tool="SSB-Output" title="SSB-Output" onclick="activeTool(this)"
+						class="list-group-item list-group-item-action pl-1">
+						<img src="images/SSB-Output.png" class="ml-2" width="90">
+					</button>
+					<button type="button" tool="Envelope" title="Envelope Detector" onclick="activeTool(this)"
+						class="list-group-item list-group-item-action pl-1">
+						<img src="images/Envelope.png" class="ml-2" width="90">
+					</button>
+					<button type="button" tool="DSBSC" title="DSBSC Demodulator" onclick="activeTool(this)"
+						class="list-group-item list-group-item-action pl-1">
+						<img src="images/DSBSCdetector.png" class="ml-2" width="90">
+					</button>
+					<button type="button" tool="SSB" title="SSB Demodulator" onclick="activeTool(this)"
+						class="list-group-item list-group-item-action pl-1">
+						<img src="images/SSBdetector.png" class="ml-2" width="90">
+					</button>
+					<button type="button" style="display: none" id="opt1" class="btn btn-primary invisible"
+						data-toggle="modal" data-target="#myGraph"></button>
+					<button type="button" style="display: none" id="opt2" class="btn btn-primary invisible"
+						data-toggle="modal" data-target="#exampleModalCenter1"></button>
+					<button type="button" style="display: none" id="opt3" class="btn btn-primary invisible"
+						data-toggle="modal" data-target="#exampleModalCenter2"></button>
+					<button type="button" style="display: none" id="opt4" class="btn btn-primary invisible"
+						data-toggle="modal" data-target="#exampleModalCenter3"></button>
+				</div>
+			</div>
+			<div class="col-10 pl-0">
+				<!-- Simulator Canvas -->
+
+				<div id="canvas-sim">
+
+
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://www.desmos.com/api/v1.5/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+
+<footer>
+	<center>
+		We Acknowledge NITK and PALS for extending their support towards successful completion of the experiment
+	</center>
+</footer>
+</body>
+<div id="wrapper">
+
+</div>
+<!-- Modal for FG Settings-->
+<div class="modal fade" id="FGSettings" tabindex="-1" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title">Function Generator Settings</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<h6>Frequency</h6>
+				<div class="input-group mb-3">
+					<input type="number" class="form-control freq" value="1000" min="0" id="freq1">
+					<div class="input-group-append">
+						<span class="input-group-text">Hz</span>
+					</div>
+				</div>
+				<h6>Amplitude</h6>
+				<div class="input-group mb-3">
+					<input type="number" class="form-control amplitude" value="50" min="0" max="100" id="ampl1">
+					<div class="input-group-append">
+						<span class="input-group-text">V</span>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+				<button type="button" class="btn btn-primary" tool="FG" onclick="activeTool(this)"
+					data-dismiss="modal">Create</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Graph -->
+<div class="modal fade bd-example-modal-xl" id="myGraph" tabindex="-1" role="dialog"
+	aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h2 class="modal-title">Graph </h2>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+
+			</div>
+			<div class="modal-body">
+				<h3 id="Sub-title"></h3>
+				<div class="row" style="width: 850px;height:500px">
+					<div class="col-11" id="calculator2" style="width: 1500px; height:400px;">
+						<br>
+						<h5>X-Axis : Timeperiod (ms)</h5>
+					</div>
+					<div class="col-1">
+						<h5>
+							<p><span class="test2">Y-axis : Amplitude (Volts)</span> </p>
+						</h5>
+					</div>
+				</div>
+				<div class="row">
+					<h3>Output</h3>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<button onclick="getScreen()" class="btn btn-primary" id="gd">Download Graph</button>
+					<a href="" id="blank"></a>
+					<div class="caption" id="caption">
+						<span id="caption-text" class="border" style="text-align: center;"></span>
+					</div>
+				</div>
+
+				<div class="row" id="shad">
+					<div class="col-8" id="cont">
+
+					</div>
+					<div class="col-4" id="cont1">
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+</html>

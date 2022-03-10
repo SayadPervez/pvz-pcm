@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Sarpanch:wght@600&display=swap");
+.navbar-brand {
+    font-size: 14px;
+    padding-top: 0px !important;
+    font-family: "Sarpanch";
+    
+    
+}
+.navbar{
+    background:#162E58;
+    background-image: linear-gradient(#162E58, #0a1936);
+}
+.navGroupTools {
+    float : right;
+    padding-left: 6px;
+    padding-right: 2x;
+    border-right-style: none;
+    border-color:gray;
+    font-family: "Sarpanch";
+}
+
+.githubSection {
+    display: flex;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.nav-item {
+    display: inline-flex;
+}
+
+input[type="file"] {
+    display: none;
+}
+#gg{
+    background-color: grey;
+}
+
+  #shad{
+    width: 900px;
+    height: 200px;
+    padding: 15px;
+    box-shadow: 10px 10px 5px grey;
+    border: 1px solid;
+  }
+  p.test2 {
+    writing-mode: vertical-rl; 
+    margin-top:-10px;
+  }
+  
+  span.test2 {
+    writing-mode: vertical-rl; 
+    margin-top:70px;
+  }
