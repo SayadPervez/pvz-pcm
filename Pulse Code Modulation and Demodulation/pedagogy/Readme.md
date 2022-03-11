@@ -1,15 +1,13 @@
 # **Pedagogy**
 ##### ***Name of the Developers:***
-##### Niteesh Babu.G.S, Shiva Shankar. U, Sanjeev Kumaar.M, V.Narayanan.
+##### Niteesh Babu.G.S, Sayad Pervez B.
 
 #####  ***Institute:***
 ##### **Rajalakshmi Engineering College**
 
 ##### ***Email id:***
 ##### 1)niteeshbabu.gs.2018.ece@rajalakshmi.edu.in
-##### 2)shivashankar.u.2018.ece@rajalakshmi.edu.in
-##### 3)sanjeevkumaar.m.2018.ece@rajalakshmi.edu.in
-##### 4)narayanan.v.2018.ece@rajalakshmi.edu.in.
+##### 2)sayadpervez.b.2019.ece@rajalakshmi.edu.in
 
 ##### **Department:** ***ECE***
 
@@ -17,41 +15,41 @@
 
 ##### Name of the Lab: **Communication Systems Laboratory(C.S.L)**
 
-##### Name of experiment: ***Amplitude Modulation and Demodulation***
+##### Name of experiment: ***Pulse Code Modulation and Demodulation***
 
 ##### Focus Area :  Experimental Analysis Method
 
 #### About the experiment:
-##### **This experiment focuses on understanding the principle of amplitude modulation & demodulation.  This experiment is formulated to study the performance of various types of amplitude modulation schemes (DSB-FC, DSB-SC & SSB) for different modulation index and also its impact on modulated signal can be analyzed. Furthermore, the  modulation index, efficacy and the   total transmitted power for each category of the amplitude modulation can be estimated and verified.**
+##### **The goal of this experiment is to understand the basic principle of pulse code modulation (PCM) and demodulation and how the analog signal at the transmitter is converted into n-bit binary (digital) using sampler, quantizer and encoder. At the receiver, the baseband signal is retrieved from the encoded binary data by using decoder and reconstruction filter. The required transmission bandwidth, signalling rate and signal to quantization ratio (SQNR) are examined to analyse the performance of PCM system.**
 
 #### 1.	Learning Objectives and Cognitive Level:
 | **No**    | **Learning& Objectives** | **Cognitive Level**     | **Action Verb**|
 | :---:        |    :----:                 | :----:                  |:----:           |
-| **1.)**       | **To provide familiarization to generate an amplitude modulated signal with various m values**| **Understand**           |       **Identify**         |
-| **2.)**         | **To analyze  both time and frequency variation of AM signal**                      | **Analyze**               |       **Examine**         |
-| **3.)**         | **To measure the percentage modulation(%m) and also the percentage of total power  in both the sidebands and the carrier  versus the modulation index(m)**                    | **Apply**                |     **Calculate**           |
-| **4.)**         | **To investigate the use of  detection/demodulation  in demodulating the AM signal**                      | **Evaluate**               |      **Conclude**          |
+| **1.)**       | **Students will be able to define pulse code modulation.**| **Remember**           |       **Define**         |
+| **2.)**         | **Students will be able to define the process of sampling, quantization, encoding and decoding for pulse code  modulation and demodulation**                      | **Remember**               |       **Define**         |
+| **3.)**         | **Students will be able to calculate the required transmission bandwidth and signalling rate of PCM signal**                    | **Apply**                |     **Calculate**           |
+| **4.)**         | **Students will be able to analyse the performance of PCM by varying the frequency and amplitude of the input baseband signal**                      | **Analyse**               |      **Analyse**          |
+| **5.)**         | **Students will be able to evaluate the signal to quantization ratio (SQNR) of   n-bit binary at the PCM output**                      | **Evaluate**               |      **Evaluate**          |
 
 #### 2. Instructional Strategy:
 #####  2. 1 Instructional Strategy:  Experiential Learning
-#####   2.2 Assessment Method: Formative Assessment (Multiple choice questions, Written exercises)
+#####   2.2 Assessment Method: Formative Assessment, Pretest and Posttest (Multiple choice questions)
 #####   2.3 Description of section:
-##### •	Theory aspects for the proposed experiment will be provided for better understanding.
-##### •	Step by step procedure to perform the experiment will be given.
-##### •	Pre test (based on the concept of AM) & Post test (based on the simulation) would be assigned to the user
-##### •	Additional reference materials will be provided.
+##### •	Theory aspects for the proposed PCM experiment will be provided for better understanding.
+##### •	Step by step procedure to perform the simulation will be given.
+##### •	Pretest questions (based on the concept of PCM) & post test questions (based on the observations carried out) will be provided to evaluate the students understanding level.
+##### •Additional reference materials related to pulse code modulation and demodulation will be provided.
 
 #### 3. Task & Assessment Questions:
 
 
 | **No**    | **Instructions given by the Teacher**| **Tasks to be done by the Students**     |**Assessment questions aligned to the task**|**Assessment questions Solutions**|
 | :---       |    :----  |          :--- |  :---|:---|
-| **1)**     | **Browse through the theory ,procedure so as to perform the simulation of amplitude modulation with ease**     | **Click on the theory icon to display the theory, step by step procedure to guide the student to perform the process of simulating amplitude modulation & demodulation**   |   **Conceptual question (to be asked by teacher): Define Amplitude Modulation**      |   **Amplitude Modulation is a modulation technique in which the amplitude of the carrier wave varies with respect to the amplitude of the modulating signal(message signal)**  |
-| **2)**   | **Choose an appropriate value as the input signal frequency so that the input signal modulates the carrier signal with proper amplitude and frequency values**        | **Click on the sine wave generator block to select appropriate baseband and carrier signal**      |**Conceptual question (to be asked by teacher): Amplitude of modulating signal is_________**|**Less than amplitude of carrier wave**|
-| **3)**     | **Compute the modulation index manually for the specified inputs manually and compare the same with the simulation generated modulation index.**     | **The simulator allocates the modulation index, m<1, m=1, m>1 based on the input specified, based on which the user can understand the changes in time domain of modulated waveform also the student should compute the modulation index manually based on the inputs and compare the same.**   |   **Conceptual question (to be asked by teacher): The modulation index of an over modulated wave is___________**      |   **Modulation Index(m)>1**  |
-| **4)**   | **Choose the type of modulation to be performed on the carrier signal with respect to baseband signal.**        | **The user has the liberty to choose between the types of modulation in which he/she would like to perform , the user can even choose to perform all the three types of modulation simultaneously at ease based on which the user has to connect the blocks for both modulator and Demodulator section.**      |**Conceptual question (to be asked by teacher):In an AM wave useful power is carrier by___________**|**Sidebands**|
-| **5)**     | **Analyze the frequency content of modulated signal.**     | **Click on the respective output blocks (DSB-FC: Adder/Envelope Detector, DSB-SC: Balanced Modulator/DSB-SC Demodulator, SSB: Filter/SSB-Demodulator) to see the analysis of AM wave.**   |   **Formative question quiz :1) DSB-FC: Does DSB-FC Wave consists of carrier and two sidebands?  2)DSB-SC: Addition of a carrier signal to DSB-SC results in ? 3) For SSB generation which modulated signal should be used ?**      |   **1) True   2) DSB-FC 3) DSB-SC**  |
-| **6)**   | **Calculate the power values for all the types of modulation and find the efficiency  and conclude the best modulation technique based on the computed values(manually) for the same .**        | **The student should first attain the values of the amplitude and modulation index values which are required to be calculated so as to compute total power and efficiency (manually)**      |**Conceptual question (to be asked by teacher): 6.	categorize the level of modulation in which Am= 3V and Ac=4V.**|**Under modulation**|
+| **1)**     | **State the principle of  Pulse code modulation and demodulation.**     | **Click on the theory button to understand the basic principle of pulse code modulation and demodulation**   |   **Conceptual question (to be asked by teacher): Define Pulse Code Modulation.**      |   **Each message sample is converted into n-bit binary.**  |
+| **2)**|**State the basic elements of PCM and its process.**   | **Click on the procedure button and see the blocks present in the simulator to understand the basic elements of PCM.**        | **Arrange the sequence of operations performed in transmitter part of a PCM system**      |**Arrange the sequence of operations performed in transmitter part of a PCM system**|
+| **3)**     | **Choose the appropriate values of frequency and amplitude of input sine wave and sampling signal and calculate the theoretical values of transmission bandwidth and signalling rate of PCM.**     | **Click on the Sine wave generator and Sampler blocks to set the suitable values of input sine wave and sampling frequency to perform PCM experiment and compute the parameters.**   |   **What is the transmission bandwidth of n- bit PCM for the message bandwidth of “w” Hz?**      |   **BT = nW**  |
+| **4)**   | **Examine the performance of PCM system by repeating the experiment using different set of frequency and amplitude values.**        | **Click on the blocks to reconstruct the PCM circuit for a new set of values and execute the simulator to analyse the output waveforms of the respective blocks and compute the PCM parameters.**      |**Obtain the codeword length of a sample which is quantized into one of 16 levels in PCM.**|**4**|
+| **5)**     | **Calculate the output signal to quantization noise ratio (SQNR) for the n-bit binary at the PCM output and verify it with the simulated result.**     | **Click on the Evaluate block at the modulator to obtain the values of SQNR, transmission bandwidth and signalling rate of n-bit PCM for the message bandwidth of “w” Hz.**   |   **Calculate the signal to quantization noise ratio in dB for a 10-bit PCM system.**      |   **61.8 dB**  |
 
 #### 4. Simulator Interactions:
 
