@@ -65,20 +65,10 @@
 #### Simulator Workspace and Workflow:
 ##### Simulator Workspace:
 
-![Simulator Workspace](./images/s2.png)
+![Simulator Workspace](./images/PCM%20workspace.png)
 
-##### Amplitude Modulation process Workflow:
+##### Evaluate Block Output:
 
-![Amplitude Modulation process workflow](./images/amww.png)
+![Evaluate Block Output](./images/08.png)
 
-##### Amplitude Modulation Workspace:
 
-![Amplitude Modulation process workflow](./images/amw.png)
-
-##### Amplitude Demodulation process Workflow:
-
-![Amplitude Demodulation process workflow](./images/adww.png)
-
-##### Amplitude Demodulation Workspace:
-
-![Amplitude Demodulation process workflow](./images/adw.png)
