@@ -27,19 +27,19 @@
 
 ##### 1.10	List of experiments:  
 
-1)	Amplitude Modulation and Demodulation
+###### 1)	Amplitude Modulation and Demodulation
 
-2)	Frequency Modulation and Demodulation
+###### 2)	Frequency Modulation and Demodulation
 
-**3)	Pulse Code Modulation (PCM)**
+###### **3)	Pulse Code Modulation (PCM)**
 
-4)	Delta Modulation (DM)
+###### 4)	Delta Modulation (DM)
 
-5)	Binary Frequency Shift Keying (BFSK) Modulation
+###### 5)	Binary Frequency Shift Keying (BFSK) Modulation
 
-6)	Binary Phase Shift Keying (BPSK) Modulation
+###### 6)	Binary Phase Shift Keying (BPSK) Modulation
 
-7)	Quadrature Phase Shift Keying (QPSK) modulation
+###### 7)	Quadrature Phase Shift Keying (QPSK) modulation
 
 
 #####  1.11.Target Group: E.C.E, C.S.E, I.T, E.E.E
