@@ -6,8 +6,8 @@
 ##### **Rajalakshmi Engineering College**
 
 ##### ***Email id:***
-##### 1)niteeshbabu.gs.2018.ece@rajalakshmi.edu.in
-##### 2)sayadpervez.b.2019.ece@rajalakshmi.edu.in
+##### 1) niteeshbabu.gs.2018.ece@rajalakshmi.edu.in
+##### 2) sayadpervez.b.2019.ece@rajalakshmi.edu.in
 
 ##### **Department:** ***ECE***
 
