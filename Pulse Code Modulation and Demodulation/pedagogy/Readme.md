@@ -25,11 +25,11 @@
 #### 1.	Learning Objectives and Cognitive Level:
 | **No**    | **Learning& Objectives** | **Cognitive Level**     | **Action Verb**|
 | :---:        |    :----:                 | :----:                  |:----:           |
-| **1.)**       | **Students will be able to define pulse code modulation.**| **Remember**           |       **Define**         |
-| **2.)**         | **Students will be able to define the process of sampling, quantization, encoding and decoding for pulse code  modulation and demodulation**                      | **Remember**               |       **Define**         |
-| **3.)**         | **Students will be able to calculate the required transmission bandwidth and signalling rate of PCM signal**                    | **Apply**                |     **Calculate**           |
-| **4.)**         | **Students will be able to analyse the performance of PCM by varying the frequency and amplitude of the input baseband signal**                      | **Analyse**               |      **Analyse**          |
-| **5.)**         | **Students will be able to evaluate the signal to quantization ratio (SQNR) of   n-bit binary at the PCM output**                      | **Evaluate**               |      **Evaluate**          |
+| **1 )**       | **Students will be able to define pulse code modulation.**| **Remember**           |       **Define**         |
+| **2 )**         | **Students will be able to define the process of sampling, quantization, encoding and decoding for pulse code  modulation and demodulation**                      | **Remember**               |       **Define**         |
+| **3 )**         | **Students will be able to calculate the required transmission bandwidth and signalling rate of PCM signal**                    | **Apply**                |     **Calculate**           |
+| **4 )**         | **Students will be able to analyse the performance of PCM by varying the frequency and amplitude of the input baseband signal**                      | **Analyse**               |      **Analyse**          |
+| **5 )**         | **Students will be able to evaluate the signal to quantization ratio (SQNR) of   n-bit binary at the PCM output**                      | **Evaluate**               |      **Evaluate**          |
 
 #### 2. Instructional Strategy:
 #####  2. 1 Instructional Strategy:  Experiential Learning
