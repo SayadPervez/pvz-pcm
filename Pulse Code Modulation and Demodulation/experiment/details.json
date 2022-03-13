@@ -2,16 +2,16 @@
 
    "details": [
        {
-			"Experiment": "Amplitude Modulation and Demodulation",
+			"Experiment": "Pulse Code Modulation and Demodulation",
 			"Lab": "Communication  Systems  Laboratory (C.S.L)",
 			"Discipline": "Electronics and Communication Engineering",
-			"Technology": "HTML, Javascript, CSS, JQuery, Inkscape"
+			"Technology": "HTML, Javascript, CSS, JQuery, P5.JS"
        }
    ],
 
    "developer": [
        {
-      "Developer": "Mrs. Saranya J",
+      "Developer": "Dr.S Chitra",
       "Institute": "Rajalakshmi Engineering College, Thandalam",
       "InstituteAcronym": "REC, Thandalam"
        }
@@ -19,35 +19,16 @@
 
    "contributer": [
        {
-			"Contributer": "Dr.S Chitra",
-      "Institute": "Rajalakshmi Engineering College, Thandalam",
-			"InstituteAcronym": "REC, Thandalam"
-       },
-
-       {
 			"Contributer": "Niteesh Babu.G.S",
 			"Institute": "Rajalakshmi Engineering College, Thandalam",
 			"InstituteAcronym": "REC, Thandalam"
        },
 
        {
-			"Contributer": "V.Narayanan",
+			"Contributer": "Sayad Pervez B",
 			"Institute": "Rajalakshmi Engineering College, Thandalam",
 			"InstituteAcronym": "REC, Thandalam"
-       },
-
-       {
-			"Contributer": "Sanjeev Kumaar.M",
-			"Institute": "Rajalakshmi Engineering College, Thandalam",
-			"InstituteAcronym": "REC, Thandalam"
-       },
-
-			 {
-		 	 "Contributer": "Shiva Shankar. U",
-		 	 "Institute": "Rajalakshmi Engineering College, Thandalam",
-		 	 "InstituteAcronym": "REC, Thandalam"
-       },
-
+       }
    ]
 
 }
