@@ -55,19 +55,47 @@
 
 | **No**      | **What students will do?** | **What Simulator will do?**     |**Conclusion of the task**|
 | :---        |    :------   |      :--------- | :---|
-| **1)**      | **Click on the theory and procedure given in the screen to carry out the Amplitude modulation (AM) and demodulation experiment.**      | **Show the theory and procedure to be followed to simulate the experiment**  |**Identify the functionality and objectives of the experiment.**|
-| **2)**  | **Understand the blocks required to build the circuit in the workspace, the modulation index and power calculation.**        | **Display the blocks and formulae to calculate the modulation index and total power of AM signal.**      |**To realize the theoretical concepts in the simulation environment.**|
-| **3)**     | **Open the workspace and click on the “Edit” button to drag and drop the blocks across the workspace and also set the properties of sine wave generators .**      | **Display the blocks with the required modulating and carrier signals.** |**To select the amplitude and frequency parameters of carrier and modulating signals.**|
-|**4)**   |**Draft a layout for the types of AM (DSB-FC, DSB-SC & SSB)(this is purely based on user's discretion). Drag the multiplier(balanced modulator),adder and output from the blocks menu and make the required connections.**         | **Display the complete illustration of AM modulator/ demodulator in the workspace.**     | **To observe the different types of AM waves.**|
-| **5)**     | **Double Click on the “Sine Wave Generator” blocks of the message signal and carrier signal to vary the amplitude and frequency of both the signals, and then click on the respective output blocks to view modulated/demodulated signals.**      | **Show the modulated signal in the scope in accordance with the variation in the modulating and carrier signal.**   | **To observe the effects of amplitude variations of signals on modulation index (over modulation, under modulation and critical modulation). To obtain the spectrum of AM signal and to evaluate the modulation index, carrier power, total transmitted power and efficiency of all the types of AM system.**|
-| **6)**   | **Click on the “Edit” button to choose the components required to build AM demodulator in the exiting workspace. Drag the blocks and do the necessary connections.**        | **Display the AM demodulator circuit in the workspace along with AM modulator.**      | **To obtain the modulating signal from the modulated signal.**|
+| **1)**      | **Click on the theory under which the concept behind the working of the experiment would be displayed followed by the procedure on the screen. The user should perform the experiments based on the guidelines listed under the procedure.**      | **Shows the theory and procedure to be followed to simulate the experiment**  |**Identify the functionality and objectives of the experiment.**|
+| **2)**  | **Understand the blocks required to build the circuit in the workspace.**        | **Display the blocks required to perform the experiment.**      |**To realize the theoretical concepts in the simulation environment.**|
+| **3)**     | **Click on any one connection point to initiate the wire connection and click on another connection point to complete the connection. Clicking on any part of the simulation canvas after initiating a wire will cause the wire to be anchored to that point. Connect all the blocks in the right order.**      | **Connect 2 blocks in the workspace.** |**Understand how to connect 2 blocks in the workspace.**|
+|**4)**   |**Double click the SINE WAVE GENERATOR block and set the amplitude (V) and frequency (Hz) of the input sinusoidal wave.**         | **Display the SINE WAVE GENERATOR control panel.**     | **To set the input signal characteristcs.**|
+| **5)**     | **Double click the SAMPLER block and set the frequency (Hz) of the sampler (Sampling Frequency).**      | **Display the SAMPLER control panel.**   | **To set the sampler characteristcs.**|
+| **6)**   | **Double click the Quantizer block to view the number of quantization levels and the discrete version of the input signal.**        | **Display the Quantizer control panel.**      | **To set the sampler characteristcs.**|
+| **7)**   | **Double click the ENCODER block to observe the binary representation of input sine wave and analyze the PCM wave for various bit lengths.**        | **Display the Encoder control panel.**      | **To set the encoder characteristcs.**|
+| **8)**   | **Double click the DECODER block to observe the decoded PCM wave. This waveform resembles that of the QUANTIZER output.**        | **Display the Decoder control panel.**      | **To observe the decoded wave.**|
+| **9)**   | **Double click the RECONSTRUCTION FILTER block to reconstruct the message signal from the decoded signal.**        | **Display the Reconstruction Filter control panel.**      | **To observe the reconstructed wave.**|
+| **10)**   | **Double click the Evaluate block to observe all the Pulse Code Modulation and Demodulation plots and verify the simulation  PCM parameters such as step size, Transmission Bandwidth, signaling rate and signal to quantization noise ratio.**        | **Display the Evaluation control panel.**      | **To observe the results of all the stages of the experiment.**|
 
 #### Simulator Workspace and Workflow:
 ##### Simulator Workspace:
 
 ![Simulator Workspace](./images/PCM%20workspace.png)
 
-##### Evaluate Block Output:
+##### SINE WAVE GENERATOR Control Panel:
+
+![Sine Wave Block Output](./images/02.png)
+
+##### Sampler Control Panel:
+
+![Sampler Block Output](./images/03.png)
+
+##### Quantizer Control Panel:
+
+![Quantizer Block Output](./images/04.png)
+
+##### Encoder Control Panel:
+
+![Encoder Block Output](./images/05.png)
+
+##### Decoder Control Panel:
+
+![Decoder Block Output](./images/06.png)
+
+##### Reconstruction Filter Control Panel:
+
+![Reconstruction Filter Block Output](./images/07.png)
+
+##### Evaluation Control Panel:
 
 ![Evaluate Block Output](./images/08.png)
 
