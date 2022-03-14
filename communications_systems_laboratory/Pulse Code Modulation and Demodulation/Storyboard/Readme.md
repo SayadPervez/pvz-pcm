@@ -124,6 +124,7 @@
 
 
 ##### 2. What is the transmission bandwidth of n- bit PCM for the message bandwidth of “w” Hz?
+
  A.	BT=4nw 
 
  B.	BT=nw/2

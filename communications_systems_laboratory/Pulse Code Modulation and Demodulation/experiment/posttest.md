@@ -3,110 +3,62 @@
 ##### ***These questions are asked to check the knowledge attained by the user after performing the experiment.***
 ##### ***Please do answer all the questions below within the allocated time to avoid any errors.***
 
-##### Number of Questions:10
+##### Number of Questions : 5
 ##### Question Pattern: MCQ
 
 #### **Quick Quiz**
 
-##### 1. The frequency and amplitude of the carrier signal should be _______ compared to baseband signal.
- ***A.	Greater than***
+##### 1. Arrange the sequence of operations performed in transmitter part of a PCM system
+ 
+ A.	Decoder, Sampler, Quantizer
 
- B.	Less than
+ B.	Quantizer, Filter, Sampler 
 
- C.	Equal to
+ C.	Encoder, quantizer, Sampler 
 
- D.	None of the Above
-
-
-##### 2. Point the condition to be satisfied for modulation without any distortion in practice.
- A.	m=1
-
-***B.	m<1***
-
-C.	m>1
-
- D.	m=0
+ ***D.	Sampler, Quantizer, Encoder***
 
 
-##### 3. How do you eliminate the occurrence of carrier signal in the generation of DSB-SC waveform?
- ***A.	Multiplying carrier and modulating signal***
+##### 2. What is the transmission bandwidth of n- bit PCM for the message bandwidth of “w” Hz?
 
- B.	Adding carrier and modulating signal
+ A.	BT=4nw 
 
- C.	Subtracting modulating signal from the carrier signal
+ B.	BT=nw/2
 
- D.	Adding the mean value of modulating and carrier signals
+ C.	BT=2nw 
 
-
-##### 4. Which among the following modulation technique is more efficient?
- A.DSB-FC
-
- B.DSB-SC
-
- ***C.SSB-SC***
-
-D. Both B&C
+ ***D. BT=nw***
 
 
+##### 3. Define PCM.
+ ***A.	Each message sample is converted into n-bit binary.***
 
-##### 5. How do you retrieve the modulating signal from DSB-FC signal?
- A.    Balanced modulator
+ B.	Each message sample is converted into analog.
 
-B.     Switching modulator
+ C.	Each message sample is converted into discrete. 
 
-***C.      Envelope detector***
-
- D.      Square law modulator
-
-
-##### 6. The DSB-FC spectrum consists of:
- A. Upper sideband only
-
- B. Lower sideband only
-
- C. Carrier frequency only
-
- ***D. All of the Above***
+ D.	Each message sample is converted into sinewave.
 
 
-##### 7. Identify the modulation scheme that uses more bandwidth and transmitted power.
- ***A.	DSB-FC***
+##### 4. Calculate the signal to quantization noise ratio in dB for a 10-bit PCM system. 
+  
+ A. 23.8 dB 
 
-B.	DSB-SC
+ ***B. 61.8 dB***
 
-C.	SSB-SC
+ C. 72.6 dB
 
-D.	Both A&B
+ D. 56.3 dB
 
 
 
-##### 8. Calculate the total transmitted power of DSB-FC modulated signal with the carrier power of 8 W and modulation index of 0.5.
- A. 4W
+##### 5. Obtain the codeword length of a sample which is quantized into one of 16 levels in PCM. 
 
- ***B. 9W***
+ A.    5
 
- C. 7W
+ ***B.     4***
 
- D. 8W
+ C.      3
 
+ D.      7
 
-
-##### 9. The modulating signal frequency and the carrier frequency of an AM broadcast station are 5KHz & 20KHz respectively. Calculate the upper & lower sideband frequencies and the total bandwidth.
- A. 20KHz, 30KHZ, 5KHz
-
- B. 10KHz, 5KHz, 10KHz
-
- ***C. 25KHz, 15KHz, 10KHz***
-
- D. 40KHz, 20KHz, 5KHz
-
-
-
-##### 10. Find the total modulation Index of AM system when a carrier wave is modulated by two modulating signals with modulation indices 0.4 and 0.3.
-A. 0.3
-
-B. 0.4
-
-C. 0.25
-
-***D. 0.5***

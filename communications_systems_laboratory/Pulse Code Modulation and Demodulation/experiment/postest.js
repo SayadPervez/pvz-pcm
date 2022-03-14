@@ -77,110 +77,57 @@
   
     const QuestionQueue = [
       {
-        question: "The frequency and amplitude of the carrier signal should be _______ compared to baseband signal",
+        question: "Arrange the sequence of operations performed in transmitter part of a PCM system",
         answers: {
-          A: "Greater than",
-          B:	"Less than",
-          C:	"Equal to",
-          D: "None of the above"
-        },
-        correctAnswer: "A"
-      },
-  
-      {
-        question: "Point the condition to be satisfied for modulation without any distortion in practice",
-        answers: {
-          A: "m=1",
-          B:"m<1",
-          C:    "m>1",
-          D:	"m=0"
-        },
-        correctAnswer: "B"
-      },
-  
-      {
-        question: "How do you eliminate the occurrence of carrier signal in the generation of DSB-SC waveform? ",
-        answers: {
-            A : "Multiplying carrier and modulating signal",
-            B: "Adding carrier and modulating signal",
-            C: "Subtracting modulating signal from the carrier signal",
-            D: "Adding the mean value of modulating and carrier signals"
-        },
-        correctAnswer: "A"
-      },
-      {
-        question: "Which among the following modulation technique is more efficient?",
-        answers: {
-            A: "DSB-FC",
-            B:	"DSB-SC",
-            C:	"SSB-SC",
-            D:	"Both B&C"
-        },
-        correctAnswer: "C"
-      },
-      {
-        question: "How do you retrieve the modulating signal from DSB-FC signal?",
-        answers: {
-            A :  "Balanced modulator",
-            B:    "Switching modulator",
-            C:     "Envelope detector",
-            D:      "Square law modulator"
-        },
-        correctAnswer: "C"
-      },
-      {
-        question: "The DSB-FC spectrum consists of:",
-        answers: {
-            A : "Upper sideband only",
-            B: "Lower sideband only",
-            C: "Carrier frequency only",
-            D: "All of the above"
+          A: "Decoder, Sampler, Quantizer",
+          B:	"Quantizer, Filter, Sampler",
+          C:	"Encoder, quantizer, Sampler",
+          D: "Sampler, Quantizer, Encoder"
         },
         correctAnswer: "D"
       },
+  
       {
-        question: "Identify the modulation scheme that uses more bandwidth and transmitted power.",
+        question: "What is the transmission bandwidth of n- bit PCM for the message bandwidth of “w” Hz?",
         answers: {
-            A : "DSB-FC",
-            B: "DSB-SC",
-            C: "SSB-SC",
-            D: "Both A&B"
+          A: "BT=4nw",
+          B:"BT=nw/2",
+          C:    "BT=2nw",
+          D:	"BT=nw"
+        },
+        correctAnswer: "D"
+      },
+  
+      {
+        question: "Define PCM.",
+        answers: {
+            A : "Each message sample is converted into n-bit binary.",
+            B: "Each message sample is converted into analog.",
+            C: "Each message sample is converted into discrete.",
+            D: "Each message sample is converted into sinewave."
         },
         correctAnswer: "A"
       },
       {
-        question: "Calculate the total transmitted power of DSB-FC modulated signal with the carrier power of 8 W and modulation index of 0.5.",
+        question: "Calculate the signal to quantization noise ratio in dB for a 10-bit PCM system.",
         answers: {
-            A :  "4W",
-            B: "9W",
-            C: "7W",
-            D: "8W"
+            A: "23.8 dB",
+            B:	"61.8 dB",
+            C:	"72.6 dB",
+            D:	"56.3 dB"
         },
         correctAnswer: "B"
       },
       {
-        question: "The modulating signal frequency and the carrier frequency of an AM broadcast station are 5KHz & 20KHz respectively. Calculate the upper & lower sideband frequencies and the total bandwidth.",
+        question: "Obtain the codeword length of a sample which is quantized into one of 16 levels in PCM.",
         answers: {
-            A :  "20KHz, 30KHZ, 5KHz",
-            B: "10KHz, 5KHz, 10KHz",
-            C: "25KHz, 15KHz, 10KHz",
-            D: "40KHz, 20KHz, 5KHz"
-            
+            A :  "5",
+            B:    "4",
+            C:     "3",
+            D:      "7"
         },
-        correctAnswer: "C"
-      },
-      {
-        question: "Find the total modulation Index of AM system when a carrier wave is modulated by two modulating signals with modulation indices 0.4 and 0.3.",
-        answers: {
-            A :  "0.3",
-            B: "0.4",
-            C: "0.25",
-            D: "0.5",
-            
-        },
-        correctAnswer: "D"
+        correctAnswer: "B"
       }
-
     ];
   
   // ---------------------------- End -------------------------------
