@@ -44,7 +44,7 @@
 ##### ***These questions are asked to examine the Theoretical knowledge absorbed by the user  during the theory class.***
 ##### ***Please do answer all the questions below within the allocated time to avoid any errors.***
 
-##### Number of Questions:5
+##### Number of Questions : 5
 ##### Question Pattern: MCQ
 
 
@@ -108,63 +108,63 @@
 ##### ***These questions are asked to check the knowledge attained by the user after performing the experiment.***
 ##### ***Please do answer all the questions below within the allocated time to avoid any errors.***
 
-##### Number of Questions: **`CHANGE ME AAAAAAH`**
+##### Number of Questions: **5**
 ##### Question Pattern: MCQ
 
 #### **Quick Quiz**
-#### **`Waiting for POSTTEST QUESTIONS`**
-#### **`Change the below section. AAAAAAAAAAAH`**
-```
-##### 1. The frequency and amplitude of the carrier signal should be _______ compared to baseband signal.
- ***A.	Greater than***
 
- B.	Less than
+##### 1. Arrange the sequence of operations performed in transmitter part of a PCM system
+ A.	Decoder, Sampler, Quantizer
 
- C.	Equal to
+ B.	Quantizer, Filter, Sampler 
 
- D.	None of the Above
+ C.	Encoder, quantizer, Sampler 
+
+ ***D.	Sampler, Quantizer, Encoder***
 
 
-##### 2. Point the condition to be satisfied for modulation without any distortion in practice.
- A.	m=1
+##### 2. What is the transmission bandwidth of n- bit PCM for the message bandwidth of “w” Hz?
+ A.	BT=4nw 
 
-***B.	m<1***
+ B.	BT=nw/2
 
-C.	m>1
+ C.	BT=2nw 
 
- D.	m=0
-
-
-##### 3. How do you eliminate the occurrence of carrier signal in the generation of DSB-SC waveform?
- ***A.	Multiplying carrier and modulating signal***
-
- B.	Adding carrier and modulating signal
-
- C.	Subtracting modulating signal from the carrier signal
-
- D.	Adding the mean value of modulating and carrier signals
+ ***D.	BT=nw***
 
 
-##### 4. Which among the following modulation technique is more efficient?
- A.DSB-FC
+##### 3. Define PCM.
+ ***A.	Each message sample is converted into n-bit binary.***
 
- B.DSB-SC
+ B.	Each message sample is converted into analog.
 
- ***C.SSB-SC***
+ C.	Each message sample is converted into discrete. 
 
-D. Both B&C
+ D.	Each message sample is converted into sinewave.
+
+
+##### 4. Calculate the signal to quantization noise ratio in dB for a 10-bit PCM system. 
+
+  
+ A. 23.8 dB 
+
+ ***B. 61.8 dB***
+
+ C. 72.6 dB
+
+ D. 56.3 dB
 
 
 
-##### 5. How do you retrieve the modulating signal from DSB-FC signal?
- A.    Balanced modulator
+##### 5. Obtain the codeword length of a sample which is quantized into one of 16 levels in PCM. 
 
-B.     Switching modulator
+ A.    5
 
-***C.      Envelope detector***
+ ***B.     4***
 
- D.      Square law modulator
-```
+ C.      3
+
+ D.      7
 
 #### Conclusion:
 
