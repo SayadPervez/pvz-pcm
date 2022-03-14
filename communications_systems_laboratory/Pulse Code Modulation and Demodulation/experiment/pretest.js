@@ -77,110 +77,56 @@
   
     const QuestionQueue = [
       {
-        question: "1.What is the need of modulation?",
+        question: "Identify the suitable digital pulse modulation which represent the signal in the form of sequence of coded pulses.",
         answers: {
-          A: "Reduces the antenna height",
-          B: "Increases the antenna height",
-          C: "Short distance communication",
-          D: "Increase the interference power"
-        },
-        correctAnswer: "A"
-      },
-  
-      {
-        question: "What are the types of analog modulation schemes? ",
-        answers: {
-          A: "Phase modulation",
-          B: "Frequency modulation",
-          C: "Amplitude modulation",
-          D: "All of the above"
+          A: "AM",
+          B: "FM",
+          C: "PM",
+          D: "PCM"
         },
         correctAnswer: "D"
       },
   
       {
-        question: "Identify the characteristics of Amplitude modulation.",
+        question: "Calculate the signal to quantization noise ratio of 7- bit PCM system for the message bandwidth of 500 Hz.",
         answers: {
-            A : "Modulating signal amplitude is varied w.r.t carrier signal",
-            B : "Carrier signal amplitude is varied w.r.t modulating signal",
-            C : "Modulated signal amplitude remains constant.",
-            D : "Modulated signal frequency and phase also varying"
+          A: "53.8 dB",
+          B: "43.8 dB",
+          C: "63.8 dB",
+          D: "33.8 dB"
+        },
+        correctAnswer: "B"
+      },
+  
+      {
+        question: "What is the drawback of PCM?",
+        answers: {
+            A : "Increased delay",
+            B : "Increased bandwidth",
+            C : "Analog output",
+            D : "Digital output"
         },
         correctAnswer: "B"
       },
       {
-        question: "What is the bandwidth requirement of DSB-FC and SSB?",
+        question: "Find the transmission bandwidth and signaling rate of  9- bit PCM for the message bandwidth of 800Hz",
         answers: {
-            A: "fm & fm",
-            B : "fm & 2fm",
-            C : "4fm & 2fm",
-            D : "2fm & fm"
-        },
-        correctAnswer: "D"
-      },
-      {
-        question: "For under modulation, what is the value of modulation index?",
-        answers: {
-            A : "m= 1",
-            B : "m>1",
-            C : "m<1",
-            D : "m=0"
-        },
-        correctAnswer: "C"
-      },
-      {
-        question: "The process of retrieving modulating signal from the modulated wave is called as",
-        answers: {
-            A : "Modulation",
-            B: "Detection",
-            C: "Multiplexing",
-            D: "Demultiplexing"
-        },
-        correctAnswer: "B"
-      },
-      {
-        question: "The modulating signal is not preserved from the envelope of an AM signal If modulation index is",
-        answers: {
-            A : "greater than 1",
-            B: "Less than 1",
-            C: "Equal to 1",
-            D: "Equal to 0"
-            
+            A: "7.2KHz, 14.4Kbps",
+            B : "8KHz, 16Kbps",
+            C : "6kHz, 3Kbps",
+            D : "9.2KHz, 9.2Kbps"
         },
         correctAnswer: "A"
       },
       {
-        question: "What is the maximum transmission efficiency of DSB-FC?",
+        question: "Identify the block in PCM which converts continuous amplitude samples into discrete  amplitude samples",
         answers: {
-            A : "44.4%",
-            B: "55.5%",
-            C: "33.33%",
-            D: "64.44%"
-            
+            A : "Sampler",
+            B : "Encoder",
+            C : "Quantizer",
+            D : "Repeater"
         },
         correctAnswer: "C"
-      },
-      {
-        question: "Identify the drawback of SSB modulation.",
-        answers: {
-            A : "Carrier to be locally generated at the receiver",
-            B: "High bandwidth",
-            C: "High transmit power",
-            D: "Low efficiency"
-            
-        },
-        correctAnswer: "A"
-      },
-      {
-        question: "Define Modulation index of AM",
-        answers: {
-            A : "Ac/Am",
-            B: "Am/Ac",
-            C: "2Am/Ac",
-            D: "Am/2Ac"
-            
-        },
-        correctAnswer: "B"
       }
     ];
   

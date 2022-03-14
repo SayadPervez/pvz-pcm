@@ -4,117 +4,61 @@
 ##### ***These questions are asked to examine the Theoretical knowledge absorbed by the user  during the theory class.***
 ##### ***Please do answer all the questions below within the allocated time to avoid any errors.***
 
-##### Number of Questions:10
+##### Number of Questions:5
 ##### Question Pattern: MCQ
 
 
 #### **Quick Quiz**
 
-##### 1.	What is the need of modulation?
- ***A.	Reduces the antenna height***
+##### 1.	Identify the suitable digital pulse modulation which represent the signal in the form of sequence of coded pulses. 
+ A.	AM
 
- B.	Increases the antenna height
+ B.	FM
 
- C.	Short distance communication
+ C.	PM
 
- D.	Increase the interference power
-
-
-
-##### 2.	What are the types of analog modulation schemes?
- A.	Phase modulation
-
- B.	Frequency modulation
-
- C.	Amplitude modulation
-
- ***D.	 All of the above***
+ ***D.	PCM***
 
 
 
-##### 3.	Identify the characteristics of Amplitude modulation.
- A.	Modulating signal amplitude is varied w.r.t carrier signal
+##### 2.	Calculate the signal to quantization noise ratio of 7- bit PCM system for the message bandwidth of 500 Hz.
+ A.	53.8
 
-***B. Carrier signal amplitude is varied w.r.t modulating signal***
+ ***B.	43.8***
 
- C.	Modulated signal amplitude remains constant.
+ C.	63.8
 
- D.	Modulated signal frequency and phase also varying
-
-
-
-#####  4.	What is the bandwidth requirement of DSB-SC and SSB?
- A.	fm & fm
-
- B.	fm & 2fm
-
- C.	4fm & 2fm
-
-***D.	2fm & fm***
+ D.	33.8
 
 
 
-##### 5.	For under modulation, what is the value of modulation index?
- A.	m= 1
+##### 3.	What is the drawback of PCM? 
+ A.	Increased delay
 
- B.	m>1
+***B. Increased bandwidth***
 
- ***C.	m<1***
+ C.	Analog output
 
- D.	m=0
-
-
-
-
-##### 6.	The process of retrieving modulating signal from the modulated wave is called as
- A.	Modulation
-
- ***B.	Detection***
-
- C.	Multiplexing
-
- D.	Demultiplexing
+ D.	Digital output
 
 
 
-##### 7.	The modulating signal is not preserved from the envelope of an AM signal If modulation index is
-***A.	greater than 1***
+#####  4.	Find the transmission bandwidth and signaling rate of  9- bit PCM for the message bandwidth of 800Hz.
+***A.	7.2KHz, 14.4Kbps***
 
- B.	Less than 1
+ B.	8KHz, 16Kbps 
 
- C.	Equal to 1
+ C.	6kHz, 3Kbps
 
- D.	Equal to 0
-
-
-
-##### 8.	What is the maximum transmission efficiency of DSB-FC?
-A : 44.4%
-
-B: 55.5%
-
-***C: 33.33%***
-
-D: 64.44%
-
-
-##### 9.	Identify the drawback of SSB modulation.
-***A.	Carrier to be locally generated at the receiver***
-
-B.	High bandwidth
-
-C.	High transmit power
-
-D.	Low efficiency
+ D.	9.2 KHz, 9.2Kbps
 
 
 
+##### 5.	Identify the block in  PCM which converts continuous amplitude samples into discrete  amplitude samples.
+ A.	Sampler
 
-##### 10.	Define Modulation index of AM
- A.	Ac/Am
+ B.	Encoder
 
- ***B.	Am/Ac***
+ ***C.	Quantizer***
 
- C.	2Am/Ac
-
- D.	Am/2Ac
+ D.	Repeater
