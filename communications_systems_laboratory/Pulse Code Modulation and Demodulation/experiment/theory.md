@@ -1,153 +1,61 @@
-##### **Theory:**
+## Theory :
 
 ### Concept
 
 #### **Introduction**
-**Modulation is the process of  transmitting low frequency message signal  over a high frequency carrier signal. In amplitude modulation, the amplitude of the carrier wave is varied in proportion to the amplitude of the message signal (modulating signal). The amplitude modulated signal consists of carrier with two sidebands namely Upper Side band(USB) and Lower Side Band(LSB) , which is known as "Double Side Band with Full Carrier System".**
+###### Pulse code modulation (PCM) is a waveform coding technique used to represent the speech signal into a sequence of coded pulses.  PCM converts the analog signal into a signal which is discrete in both time and amplitude. The three basic elements of PCM are sampler, Quantizer and encoder. The input analog signal is bandlimited using a low pass filter prior to sampling in order to avoid aliasing effect. Sampling is the process of converting continuous time signal into discrete time signal.  The analog signal is instantaneously sampled with a train of narrow rectangular pulses. The sampling rate should be greater than twice the highest frequency of the input analog signal for perfect reconstruction at the receiver.  The continuous amplitude signal is converted into discrete amplitude signal by means of quantizer. The types of quantizer are uniform and non-uniform. The representation levels are uniformly spaced in uniform quantizer and the step size remains the same throughout the signal range.  The quantization error can be controlled by varying the step size. The signal discrete in both time and amplitude is converted into digital using an encoder.  The decoder coverts the coded pulses into quantized pulse amplitude modulated (PAM) signal and the low pass reconstruction filter at the receiver with a cut off frequency equal to the message bandwidth is used to retrieve the baseband signal from the quantized PAM.
 
-#### **The Types of Amplitude Modulation**
-**The most common forms of amplitude modulation techniques are as follows:**
+![PCM](./images/pulse_code_modulation.jpg)
 
-#### 1) DSB-FC -“Double Sideband with Full Carrier System”/Standard AM ,
-#### 2) DSB-SC – “Double Sideband with Suppressed Carrier System”,
-#### 3) SSB – “Single Side Band System”
+###### The goal of this experiment is to understand the basic principle of pulse code modulation (PCM) and demodulation and how well the analog signal at the transmitter is converted into n-bit binary digital) using sampler, quantizer and encoder. The required transmission bandwidth, signaling rate, step size and signal to quantization noise ratio (SQNR) are examined to evaluate the performance of the PCM system.
 
+#### **The Types of Pulse Code Modulation**
 
-#### 1)**Double Sideband with Full Carrier System(DSB-FC)**
-##### Introduction
-**The modulated signal which includes the carrier component  along with two side bands namely USB & LSB (USB contains higher frequency components, whereas the (LSB) has lower frequency components with reference to carrier frequency ) is known as a Double Sideband with Full Carrier system, or simply DSB-FC. In DSB-FC both the  sidebands carry the same information. The graphical representation of DSB-FC modulated signal is illustrated below.**
+###### 1) Differential Pulse Code Modulation ( DPCM )
+###### 2) Adaptive differential pulse code modulation ( ADPCM )
+###### 3) Delta Modulation (DM)
 
-#### **DSB-FC Waveform**
 
-![DSB-FC Waveform](./images/DSB-FC.png)
+#### 1) Differential Pulse Code Modulation ( DPCM )
+###### In DPCM, the difference between the successive sample values are quantized and encoded into binary. The sampling rate chosen for DPCM is slightly higher than the Nyquist rate as in PCM in order to produce the highly correlated samples. The basic principle of DPCM is by removing the redundancy prior to encoding and to produce an efficient coded signal. The difference between the input sample and the prediction filter output is encoded into binary. By using the same prediction filter at the receiver, the analog signal is reconstructed from the decoder output.
 
- ***Note: The modulation index μ  ranges from  0 to 1 for effective reconstruction at the receiver.***
+#### 2) Adaptive differential pulse code modulation ( ADPCM )
+###### ADPCM offers speech coding at low bit rates without compromising the quality of reproduction. The principle behind ADPCM is by removing the redundant information from speech signal as far as possible and encode the non-redundant parts of the speech signal into binary. It uses adaptive quantization and adaptive prediction to save the bandwidth and reduce the bit rate. 
 
-##### Demodulation
-**The modulated signal is passed through  an envelope detector, which consists of a Halfwave Rectifier and an RC Filter that would detect the envelop of the modulated signal  and retrieve the message signal from the DSB-FC modulated signal.**
+#### 3) Delta Modulation ( DM )
+###### In Delta modulation (DM), each sample is encoded into single bit either ‘0’ or ‘1’. The sampling rate of is much higher than the Nyquist rate to increase the correlation between the successive samples. It provides the staircase approximation to the sampled version of input analog signal. The difference between the input and the approximation is quantized and encoded into two levels corresponding to the positive and negative differences.
 
 
-##### Advantages
-**1) The receiver is  simple and inexpensive.**
+#### **Function of the equipment's  required to perform Pulse Code Modulation/Demodulation for each type.**
 
-##### Disadvantages
-**1) Wastage of power & bandwidth is more .**
+##### Sine wave generator:
+###### This block is used to generate the sinusoidal input signal of frequency ‘fm’ Hz and amplitude ‘A’ volts. 
+##### Sampler:
+###### The input analog signal is converted into discrete time signal using a sampler block. The narrow rectangular pulses produced by sampler is used to vary the number of samples in an analog signal. The sampling frequency produced by this block is greater than twice the input analog signal frequency ‘fm’. 
+##### Quantizer:
+###### The discrete time signal from the sampler is converted into discrete amplitude signal using quantizer block. The number of levels in the quantizer and the maximum amplitude of the input signal defines the step size. 
+##### Encoder:
+###### The discrete time and amplitude signal is converted into digital by encoder block. It produces the ‘n’-bit binary equivalent of the input sample value. The number of bits at the encoder output determines the signal to quantization noise ratio of PCM system.
+##### Decoder:
+###### The PCM wave is converted into quantized PAM using this block. It converts digital data into discrete time- amplitude signal. 
+##### Reconstruction filter:
+###### Reconstruction filter is the low pass filter with a cut off frequency of ‘fm’ Hz. It allows the analog signal of frequency ‘fm’ and discard all the high frequency components.
+##### Evaluate:
+###### This block is used to analyse the PCM parameters such as step size, transmission bandwidth, Signaling rate and signal to quantization noise ratio (SQNR) for the input signal. 
 
-**2) Overall efficiency is low (about 33 percent).**
+#### **Advantages of Pulse Code Modulation**
+###### 1) Less effect of channel noise and interference.
+###### 2) Efficient regeneration of the coded signal.
+###### 3) Uses Uniform format for transmission.
+###### 4) Secure communication.
 
-
-
-
-
-#### 2)**Double Sideband with Suppressed Carrier System(DSB-SC)**
-##### Introduction
-**DSB-SC system consists only of two sidebands namely USB ,LSB in the absence of carrier signal. The carrier signal and the message signal are sent via a product modulator/balanced modulator to create DSB-SC modulated signal. The graphical representation of DSB-SC modulated signal is illustrated below.**
-
-#### **DSB-SC Waveform**
-
-![DSB-SC Waveform](./images/DSB-SCO.png)
-
- ***Note: The bandwidth of the DSB-SC modulated signal is twice the bandwidth of the message signal.***
-
-##### Demodulation
-**The DSB-SC modulated signal is henceforth multiplied  with the carrier signal using product modulator and the resultant  signal is passed through a low pass filter (LPF) to attenuate the high frequency components of the modulated signal and enable just the low frequency components (message signal) to pass through.**
-
-
-##### Advantages
-**1) Simple Modulation technique.**
-
-**2) Sidebands do not require filtering during this type of modulation.**
-
-**3) Power wastage is less compared to DSB-FC for this modulation scheme**
-
-##### Disadvantages
-**1) It contains less carrier information about the carrier.**
-
-**2) Detection process is complex.**
-
-**3) More bandwidth than SSB.**
-
-#### 3)**Single Sideband Suppressed Carrier System(SSB-SC)/(SSB)**
-##### Introduction
-**In Single sideband system  only a single sideband either USB or LSB is broadcast by an antenna where the carrier and the other sideband is suppressed . The DSB-SC modulated signal  is passed through a Bandpass filter which results in SSB modulated signal. The graphical representation of SSB modulated signal is illustrated below.**
-
-#### **SSB-SC Waveform**
-![SSB Waveform](./images/SSB.png)
-
- ***Note: The bandwidth of the SSB signal is equal to the bandwidth of the message signal.***
-
-##### Demodulation
-**The SSB modulated signal is henceforth multiplied  with the carrier signal using product modulator and the resultant  signal is passed through a low pass filter (LPF) to attenuate the high frequency components of the modulated signal and enable just the low frequency components (message signal) to pass through.**
-
-
-##### Advantages
-**1) The bandwidth of SSB signal is same as the bandwidth of the message signal.**
-
-**2) This modulation technique only  transmits one sideband, and hence as a result  half the power is saved.**
-
-##### Disadvantages
-**1) In this modulation technique, filtering of one sideband is difficult and hence adds to the transmitter circuit's complexity.**
-
-**2) A bandpass filter with an extremely sharp cutoff is required to perform this type of modulation.**
-
-
-##### **Function of the equipment's  required to perform Amplitude Modulation/Demodulation for each type.**
-##### **A)Transmitting side**
-
-##### **1)Wave generator:**
-
-**This is the input blocks of the transmitter component, where one of the wave generator is used  for message signal generation whereas the other  is used  for carrier wave generation.**
-**Note :User must set the amplitude and frequency in order to initiate the modulation process.**
-
-##### **2)Balanced modulator:**
-
-**Balanced modulator is a product modulator which accepts message and carrier signals as the inputs and deliver the DSB-SC as output.**
-
-
-
-##### **3)Adder:**
-
-**The Adder accepts a DSB-SC signal and  carrier signal  as input and produce DSB-FC waveform.**
-
-
-
-##### **4)Side Band Suppress Filter (SSBF):**
-
-**A Side Band suppress filter is basically a band pass filter where the function of the Side Band filter is to suppress the one of the sidebands  in the DSB-SC signal which is fed as input and  results in a single sideband signal.**
-
-
-
-##### **B) Receiver  side**
-
-
-
-##### **1)Envelope Detector:**
-**This is a combination of the halfwave Rectifier function and the RC-Filter function in which the main purpose of this block is to identify the message signal component from the DSB-FC modulated signal and extract the same.**
-
-##### Note: The equivalent of the Half wave rectifier block in cascade with an RC-Filter would be an Envelop Detector Block.
-
-
-##### **2)DSB-SC Demodulator:**
-**This is a predefined block which is used to identify the message signal component from the DSB-SC modulated signal and extract the same.**
-
-
-##### **3)SSB Demodulator:**
-**This is a predefined block which is used to identify the message signal component from the SSB-modulated signal and extract the same.**
-
-
-
-#### **Disadvantages of Amplitude Modulation**
-
-
-**1) Wastage of power & Bandwidth is high**
-
-**2) Effect of Noise and Interference is more**
+#### **Disadvantages of Pulse Code Modulation**
+###### 1) System complexity is more.
+###### 2) Increased bandwidth. 
 
 #### **Practical Applications of Amplitude Modulation**
-
-**1) Am Broadcasting**
-
-**2)Airborne applications**
+###### 1) Telephony.
+###### 2) Satellite communication system.
 
 
 
@@ -158,8 +66,6 @@
 |**Total power/Modulation Index Calculation for DSB-FC:**     | **1)Pt=Pc[1+(mu x mu)/2]**,**2)N=[(mu x mu)/2+(mu x mu)]**  |   **Pc🡪 Carrier signal Power,Pt🡪 Total Power of DSB-FC Signal,mu🡪 Modulation Index,N 🡪Efficiency**|
 | **Total power /Modulation Index Calculation for DSB-SC:**   | **Pt’=[(mu x mu)  x (VC x VC)]/4=>Pc x (mu x mu)/2,N= [2/2+(mu x mu)]**      |       **Pc🡪  Carrier signal Power,Pt’🡪 Total Power of DSB-SC Signal,mu🡪 Modulation Index,N 🡪Efficiency**|
 | **Total power/Modulation Index Calculation for SSB/SSB-SC:**   | **Pt’’=[(mu x mu)  x (VC x VC)]/8=>Pc x (mu x mu)/4,N=[4+(mu x mu)/4+(2 x (mu x mu))]**      |       **Pc🡪  Carrier signal Power,Pt’🡪 Total Power of DSB-SC Signal,mu🡪 Modulation Index,N 🡪Efficiency**          |
-
-
 
 #### Flowchart:
 
