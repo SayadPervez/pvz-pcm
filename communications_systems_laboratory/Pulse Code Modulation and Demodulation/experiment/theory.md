@@ -62,10 +62,11 @@
 #### Equations/formulas:
 
 | **Theory**     | **Formulae** |   **Description**|
-| :-----------:| :--------------: | :-----------:|
-|**Total power/Modulation Index Calculation for DSB-FC:**     | **1)Pt=Pc[1+(mu x mu)/2]**,**2)N=[(mu x mu)/2+(mu x mu)]**  |   **Pc🡪 Carrier signal Power,Pt🡪 Total Power of DSB-FC Signal,mu🡪 Modulation Index,N 🡪Efficiency**|
-| **Total power /Modulation Index Calculation for DSB-SC:**   | **Pt’=[(mu x mu)  x (VC x VC)]/4=>Pc x (mu x mu)/2,N= [2/2+(mu x mu)]**      |       **Pc🡪  Carrier signal Power,Pt’🡪 Total Power of DSB-SC Signal,mu🡪 Modulation Index,N 🡪Efficiency**|
-| **Total power/Modulation Index Calculation for SSB/SSB-SC:**   | **Pt’’=[(mu x mu)  x (VC x VC)]/8=>Pc x (mu x mu)/4,N=[4+(mu x mu)/4+(2 x (mu x mu))]**      |       **Pc🡪  Carrier signal Power,Pt’🡪 Total Power of DSB-SC Signal,mu🡪 Modulation Index,N 🡪Efficiency**          |
+| :-----------: | :------------: | :-----------: |
+|**Transmission Bandwidth, Bt (Hz)**     | **Bt = nW**  |   **n🡪 number of bits/sample, W🡪 Message Bandwidth**|
+| **Step Size, S (V)**   | **S=(2*Amax)/L**      |       **Amax🡪  Maximum Amplitude of the input signal, L🡪 Number of quantization levels**|
+| **Signaling Rate, r (bits/sec)**   | **r = 2nW**      |       **n🡪 number of bits/sample, W🡪 Message Bandwidth**          |
+| **Signal to quantization noise ratio, SQNR (dB)**   | **SQNR = 1.8 + 6n**      |       **n🡪 number of bits/sample**          |
 
 #### Flowchart:
 
