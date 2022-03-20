@@ -31,7 +31,7 @@
 
 ###### 2)	Frequency Modulation and Demodulation
 
-###### **3)	Pulse Code Modulation (PCM)**
+##### 3)	Pulse Code Modulation (PCM)
 
 ###### 4)	Delta Modulation (DM)
 
