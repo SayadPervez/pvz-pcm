@@ -218,7 +218,7 @@ function draw() {
     vertical_scaling_factor = vertical_scale_element.value;
     horizontal_scaling_factor = horizontal_scale_element.value;
     bit_length_element.innerText = bl_scale_element.value;
-    var nw = bl_scale_element.value*20;
+    var nw = bl_scale_element.value;
     document.getElementById("transmissionbandwidth").innerHTML=nw;
     document.getElementById("signalingrate").innerHTML=nw*2;
     document.getElementById("SQNR_id").innerHTML=(bl_scale_element.value*6)+1.8;
