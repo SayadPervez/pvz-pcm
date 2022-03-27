@@ -1,4 +1,4 @@
-import { SineGenerator, Sampler, Quantizer, ReconstructionFilter } from './Block.js'
+import { SineGenerator, Sampler, Quantizer, ReconstructionFilter , Evaluate } from './Block.js'
 import { Wire, connectionNodes, WireManager, Encoder, Decoder } from './Block.js';
 import { drawSourceWave } from './sourceWaveGraph.js';
 import { drawSampledWave } from './sampledWaveGraph.js';
@@ -68,8 +68,9 @@ function setup_modulation() {
 }
 
 function setup_demodulation() {
-    myblocks.set('decoder', new Decoder(450+145, 587.6-170, 200, 100));
-    myblocks.set('reconstructionfilter', new ReconstructionFilter(950+145, 587.6-170, 200, 100));
+    myblocks.set('decoder', new Decoder(450-200, 587.6-170, 200, 100));
+    myblocks.set('reconstructionfilter', new ReconstructionFilter(950-200, 587.6-170, 200, 100));
+    myblocks.set('evaluate', new Evaluate(1250, 587.6-170, 200, 100));
 
     // myblocks.set('line1dm', new Line((val) => {
     //     const decoder = myblocks.get('decoder');

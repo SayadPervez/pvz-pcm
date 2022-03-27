@@ -241,6 +241,25 @@ export class Sampler extends Block {
     }
 }
 
+export class Evaluate extends Block {
+    constructor (x, y, w, h) {
+        super(x, y, w, h, 'Evaluate', null, true);
+        this.input = new Point(this.cx - 7, this.cy + this.ch / 2);
+        //this.output = new Point(this.cx - 7 , this.cy + this.ch / 2);
+        connectionNodes.push(this.input);
+        //connectionNodes.push(this.output);
+    }
+
+    draw() {
+        super.draw();
+        this.input.draw();
+    }
+
+    doubleClickModal() {
+        document.getElementById("button1").click();
+    }
+}
+
 export class Quantizer extends Block {
     constructor (x, y, w, h) {
         super(x, y, w, h, 'QUANTIZER', null, true);
